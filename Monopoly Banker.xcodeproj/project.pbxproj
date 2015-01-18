@@ -23,6 +23,8 @@
 		158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */; };
 		158120DB1A6B661C003580B0 /* DS-DIGIB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 158120DA1A6B661C003580B0 /* DS-DIGIB.TTF */; };
 		158120DE1A6B676A003580B0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120DD1A6B676A003580B0 /* GameViewController.swift */; };
+		158120E11A6BFFDC003580B0 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120E01A6BFFDC003580B0 /* DataModel.swift */; };
+		158120E41A6C0569003580B0 /* SavedGames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 158120E31A6C0569003580B0 /* SavedGames.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewCell.swift; path = "Load Game/LoadGameTableViewCell.swift"; sourceTree = "<group>"; };
 		158120DA1A6B661C003580B0 /* DS-DIGIB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGIB.TTF"; sourceTree = "<group>"; };
 		158120DD1A6B676A003580B0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
+		158120E01A6BFFDC003580B0 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = Model/DataModel.swift; sourceTree = "<group>"; };
+		158120E31A6C0569003580B0 /* SavedGames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SavedGames.plist; path = Resources/PLISTs/SavedGames.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		151DACE51A6B261A0005D5F9 /* Monopoly Banker */ = {
 			isa = PBXGroup;
 			children = (
+				158120DF1A6BFF7D003580B0 /* Model */,
 				158120DC1A6B6748003580B0 /* Game */,
 				158120D31A6B5EAC003580B0 /* Load Game */,
 				151DAD081A6B2B9C0005D5F9 /* Tutorial */,
@@ -148,6 +153,7 @@
 		151DAD171A6B35670005D5F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				158120E21A6C053A003580B0 /* PLISTs */,
 				158120D81A6B65D4003580B0 /* Fonts */,
 				151DAD191A6B357B0005D5F9 /* Images */,
 			);
@@ -188,6 +194,22 @@
 				158120DD1A6B676A003580B0 /* GameViewController.swift */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		158120DF1A6BFF7D003580B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				158120E01A6BFFDC003580B0 /* DataModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		158120E21A6C053A003580B0 /* PLISTs */ = {
+			isa = PBXGroup;
+			children = (
+				158120E31A6C0569003580B0 /* SavedGames.plist */,
+			);
+			name = PLISTs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				151DACEE1A6B261A0005D5F9 /* Main.storyboard in Resources */,
+				158120E41A6C0569003580B0 /* SavedGames.plist in Resources */,
 				151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */,
 				151DAD151A6B355F0005D5F9 /* page3.png in Resources */,
 				158120DB1A6B661C003580B0 /* DS-DIGIB.TTF in Resources */,
@@ -301,6 +324,7 @@
 				158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */,
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				151DACE91A6B261A0005D5F9 /* AppDelegate.swift in Sources */,
+				158120E11A6BFFDC003580B0 /* DataModel.swift in Sources */,
 				151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */,
 				158120D51A6B5EDD003580B0 /* LoadGameTableViewController.swift in Sources */,
 			);

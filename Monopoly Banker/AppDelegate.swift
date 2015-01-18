@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor();
         pageControl.currentPageIndicatorTintColor = UIColor.blackColor();
         pageControl.backgroundColor = UIColor.whiteColor();
-        
+		
+		DataModel.sharedInstance.printSavedGames()
+		
         // Override point for customization after application launch.
         return true
     }
