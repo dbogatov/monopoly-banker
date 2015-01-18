@@ -120,7 +120,7 @@
                                     <rect key="frame" x="560" y="468" width="192" height="88"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="FSn-e4-GY8" kind="presentation" id="v1t-Jv-meR"/>
+                                    <segue destination="FSn-e4-GY8" kind="presentation" identifier="tutorialSegue" id="v1t-Jv-meR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRP-0Q-xCc">

@@ -15,6 +15,8 @@ class DataModel: NSObject {
 	
 	override init() {
 		super.init()
+		seedFile("SavedGames")
+		seedFile("FirstTimeLaunch")
 		readSavedGames()
 		readFistTimeLaunch()
 	}
@@ -26,15 +28,43 @@ class DataModel: NSObject {
         return Static.instance
     }
 	
+	// MARK: - Seed functions
+	
+	func pathToDocsFolder(name : String) -> String {
+		let pathToDocumentsFolder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+		
+		return pathToDocumentsFolder.stringByAppendingPathComponent("/"+name+".plist")
+	}
+	
+	func seedFile(name : String) {
+		let theFileManager = NSFileManager.defaultManager()
+		
+		if theFileManager.fileExistsAtPath(pathToDocsFolder(name)) {
+			println("File \(name) Found!")
+		}
+		else {
+			// Copy the file from the Bundle and write it to the Device:
+			let pathToBundledDB = NSBundle.mainBundle().pathForResource(name, ofType: "plist")
+			let pathToDevice = pathToDocsFolder(name)
+			
+			// Here is where I get the error:
+			if (theFileManager.copyItemAtPath(pathToBundledDB!, toPath:pathToDevice, error:nil)) {
+				println("File \(name) Copied!")
+			}
+			else {
+				println("Error with file \(name) !")
+			}
+		}
+	}
+	
 	// MARK: - Read functions
 	
 	func readSavedGames() {
 		savedGames.removeAll()
 		
 		var sgArray : NSArray = []
-		if let path = NSBundle.mainBundle().pathForResource("SavedGames", ofType: "plist") {
-			sgArray = NSArray(contentsOfFile: path)!
-		}
+		let path = pathToDocsFolder("SavedGames")
+		sgArray = NSArray(contentsOfFile: path)!
 		
 		for game in sgArray {
 			
@@ -52,10 +82,19 @@ class DataModel: NSObject {
 	}
 	
 	func readFistTimeLaunch() {
-		if let path = NSBundle.mainBundle().pathForResource("FirstTimeLaunch", ofType: "plist") {
-			let dict : NSDictionary = NSDictionary(contentsOfFile: path)!
-			isFirstLaunch = dict["FirstTimeLaunch"] as Bool
-		}
+		let path = pathToDocsFolder("FirstTimeLaunch")
+		let dict : NSDictionary = NSDictionary(contentsOfFile: path)!
+		isFirstLaunch = dict["FirstTimeLaunch"] as Bool
+	}
+	
+	// MARK: - Write functions
+	
+	func writeFistTimeLaunch() {
+		isFirstLaunch = false
+		
+		let path = pathToDocsFolder("FirstTimeLaunch")
+		let toSave : NSDictionary = ["FirstTimeLaunch": false]
+		toSave.writeToFile(path, atomically: true)
 	}
 	
 	// MARK: - Print functions
@@ -69,9 +108,12 @@ class DataModel: NSObject {
 	func printFistTimeLaunch() {
 		println("First time launch: " + (isFirstLaunch ? "YES" : "NO"))
 	}
-	
-	
+
 }
+	
+
+
+// MARK: - Supporting structures
 
 struct SavedGame {
 	var finished : Bool
