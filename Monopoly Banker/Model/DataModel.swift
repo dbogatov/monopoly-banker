@@ -12,10 +12,12 @@ class DataModel: NSObject {
 	
 	var savedGames : [SavedGame] = []
 	var isFirstLaunch : Bool = false
+	var currentGame : SavedGame?
+	let initialBalance : Int = 15000
 	
 	override init() {
 		super.init()
-		seedFile("SavedGames")
+		seedFile("SavedGames", force: true)
 		seedFile("FirstTimeLaunch")
 		readSavedGames()
 		readFistTimeLaunch()
@@ -36,10 +38,10 @@ class DataModel: NSObject {
 		return pathToDocumentsFolder.stringByAppendingPathComponent("/"+name+".plist")
 	}
 	
-	func seedFile(name : String) {
+	func seedFile(name : String, force : Bool = false) {
 		let theFileManager = NSFileManager.defaultManager()
 		
-		if theFileManager.fileExistsAtPath(pathToDocsFolder(name)) {
+		if theFileManager.fileExistsAtPath(pathToDocsFolder(name)) && !force {
 			println("File \(name) Found!")
 		}
 		else {
@@ -47,7 +49,10 @@ class DataModel: NSObject {
 			let pathToBundledDB = NSBundle.mainBundle().pathForResource(name, ofType: "plist")
 			let pathToDevice = pathToDocsFolder(name)
 			
-			// Here is where I get the error:
+			if theFileManager.fileExistsAtPath(pathToDocsFolder(name)) {
+				theFileManager.removeItemAtPath(pathToDocsFolder(name), error: nil)
+			}
+			
 			if (theFileManager.copyItemAtPath(pathToBundledDB!, toPath:pathToDevice, error:nil)) {
 				println("File \(name) Copied!")
 			}
@@ -68,6 +73,7 @@ class DataModel: NSObject {
 		
 		for game in sgArray {
 			
+			let ID : String = game["ID"] as String
 			let finished : Bool = game["Finished"] as Bool
 			let date : NSDate = game["Date"] as NSDate
 			let accountsDic : NSArray = game["Accounts"] as NSArray
@@ -77,7 +83,7 @@ class DataModel: NSObject {
 				accounts.append(Account(name: account["Name"] as String, balance: account["Balance"] as Int))
 			}
 			
-			savedGames.append(SavedGame(finished: finished, date: date, accounts: accounts))
+			savedGames.append(SavedGame(finished: finished, date: date, accounts: accounts, ID : ID))
 		}
 	}
 	
@@ -97,6 +103,31 @@ class DataModel: NSObject {
 		toSave.writeToFile(path, atomically: true)
 	}
 	
+	func writeGames() {
+		let path = pathToDocsFolder("SavedGames")
+		
+		var result : NSMutableArray = [];
+		for game in savedGames {
+			var record : NSMutableDictionary = [:]
+			
+			record.setValue(game.ID, forKey: "ID")
+			record.setValue(game.finished, forKey: "Finished")
+			record.setValue(game.date, forKey: "Date")
+			
+			var accounts : [NSDictionary] = []
+			
+			for acc in game.accounts {
+				accounts.append([acc.name : acc.balance])
+			}
+			
+			record.setValue(accounts, forKey: "Accounts")
+			
+			result.addObject(record)
+		}
+		
+		result.writeToFile(path, atomically: true)
+	}
+	
 	// MARK: - Print functions
 	
 	func printSavedGames() {
@@ -109,26 +140,68 @@ class DataModel: NSObject {
 		println("First time launch: " + (isFirstLaunch ? "YES" : "NO"))
 	}
 
+	// MARK: - Game functions
+	
+	func startNewGame(names : String...) {
+		var accounts : [Account] = []
+		for name in names {
+			accounts.append(Account(name: name, balance: initialBalance))
+		}
+		
+		currentGame = SavedGame(finished: false, date: NSDate(), accounts: accounts)
+		
+		savedGames.append(currentGame!)
+	}
+	
+	func loadGame(ID : String) {
+		for game in savedGames {
+			if game.ID == ID {
+				currentGame = game
+			}
+		}
+	}
+	
+	func saveGame() {
+		writeGames()
+	}
+	
 }
 	
 
 
-// MARK: - Supporting structures
+// MARK: - Supporting classes
 
-struct SavedGame {
+class SavedGame {
+	var ID : String
 	var finished : Bool
 	var date : NSDate
-	var accounts : [Account]
+	var accounts : [Account] = []
+	
 	
 	init(finished : Bool, date : NSDate, accounts : [Account]) {
 		self.finished = finished
 		self.date = date
 		self.accounts = accounts
+		self.ID = "\(NSDate().timeIntervalSince1970)"
+	}
+
+	convenience init(finished : Bool, date : NSDate, accounts : [Account], ID : String) {
+		self.init(finished: finished, date: date, accounts: accounts)
+		self.ID = ID
 	}
 	
-	 func description() -> String {
+	func deposit(amount : Int, recipient : String) {
+		for acc in accounts {
+			if acc.name == recipient {
+				acc.deposit(amount)
+			}
+		}
+	}
+	
+	func description() -> String {
 		var result : String = "";
 		
+		result += "ID: \(ID)\n"
 		result += "Finished: " + (finished ? "YES" : "NO") + "\n"
 		result += "Date: \(date)\n"
 		result += "Accounts:\n"
@@ -140,13 +213,17 @@ struct SavedGame {
 	}
 }
 
-struct Account {
-	var name : String
-	var balance : Int
+class Account {
+	var name : String = ""
+	var balance : Int = 0
 	
 	init(name : String, balance : Int) {
 		self.name = name
 		self.balance = balance
+	}
+	
+	func deposit(amount : Int) {
+		balance += amount
 	}
 	
 	func description() -> String {

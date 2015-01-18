@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		DataModel.sharedInstance.printSavedGames()
 		DataModel.sharedInstance.printFistTimeLaunch()
 		
+		DataModel.sharedInstance.startNewGame("Dima", "Dima4ka", "Dimasya")
+		DataModel.sharedInstance.printSavedGames()
+		DataModel.sharedInstance.saveGame()
+		
         // Override point for customization after application launch.
         return true
     }
