@@ -13,6 +13,12 @@
 		151DACF01A6B261A0005D5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151DACEF1A6B261A0005D5F9 /* Images.xcassets */; };
 		151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151DACF11A6B261A0005D5F9 /* LaunchScreen.xib */; };
 		151DACFF1A6B261A0005D5F9 /* Monopoly_BankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */; };
+		151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */; };
+		151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */; };
+		151DAD131A6B355F0005D5F9 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD0F1A6B355F0005D5F9 /* page1.png */; };
+		151DAD141A6B355F0005D5F9 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD101A6B355F0005D5F9 /* page2.png */; };
+		151DAD151A6B355F0005D5F9 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD111A6B355F0005D5F9 /* page3.png */; };
+		151DAD161A6B355F0005D5F9 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD121A6B355F0005D5F9 /* page4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		151DACF81A6B261A0005D5F9 /* Monopoly BankerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monopoly BankerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		151DACFD1A6B261A0005D5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monopoly_BankerTests.swift; sourceTree = "<group>"; };
+		151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = Tutorial/PageContentViewController.swift; sourceTree = "<group>"; };
+		151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageRootViewController.swift; path = Tutorial/PageRootViewController.swift; sourceTree = "<group>"; };
+		151DAD0F1A6B355F0005D5F9 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		151DAD101A6B355F0005D5F9 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		151DAD111A6B355F0005D5F9 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		151DAD121A6B355F0005D5F9 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +89,13 @@
 		151DACE51A6B261A0005D5F9 /* Monopoly Banker */ = {
 			isa = PBXGroup;
 			children = (
+				151DAD081A6B2B9C0005D5F9 /* Tutorial */,
 				151DACE81A6B261A0005D5F9 /* AppDelegate.swift */,
 				151DACEA1A6B261A0005D5F9 /* ViewController.swift */,
 				151DACEC1A6B261A0005D5F9 /* Main.storyboard */,
 				151DACEF1A6B261A0005D5F9 /* Images.xcassets */,
 				151DACF11A6B261A0005D5F9 /* LaunchScreen.xib */,
+				151DAD171A6B35670005D5F9 /* Resources */,
 				151DACE61A6B261A0005D5F9 /* Supporting Files */,
 			);
 			path = "Monopoly Banker";
@@ -110,6 +124,34 @@
 				151DACFD1A6B261A0005D5F9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		151DAD081A6B2B9C0005D5F9 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */,
+				151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		151DAD171A6B35670005D5F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				151DAD191A6B357B0005D5F9 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		151DAD191A6B357B0005D5F9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				151DAD0F1A6B355F0005D5F9 /* page1.png */,
+				151DAD101A6B355F0005D5F9 /* page2.png */,
+				151DAD111A6B355F0005D5F9 /* page3.png */,
+				151DAD121A6B355F0005D5F9 /* page4.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +236,11 @@
 			files = (
 				151DACEE1A6B261A0005D5F9 /* Main.storyboard in Resources */,
 				151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */,
+				151DAD151A6B355F0005D5F9 /* page3.png in Resources */,
+				151DAD161A6B355F0005D5F9 /* page4.png in Resources */,
+				151DAD131A6B355F0005D5F9 /* page1.png in Resources */,
 				151DACF01A6B261A0005D5F9 /* Images.xcassets in Resources */,
+				151DAD141A6B355F0005D5F9 /* page2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */,
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				151DACE91A6B261A0005D5F9 /* AppDelegate.swift in Sources */,
+				151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +455,7 @@
 				151DAD041A6B261A0005D5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		151DAD051A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Monopoly BankerTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +464,7 @@
 				151DAD071A6B261A0005D5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
