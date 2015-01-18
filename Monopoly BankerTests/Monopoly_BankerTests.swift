@@ -9,6 +9,7 @@
 import UIKit
 import XCTest
 
+
 class Monopoly_BankerTests: XCTestCase {
     
     override func setUp() {
@@ -25,7 +26,13 @@ class Monopoly_BankerTests: XCTestCase {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
     }
-    
+	
+	func testModelFisrtTimeLaunch() {
+		XCTAssertEqual(DataModel.sharedInstance.isFirstLaunch, true, "First time launch")
+		DataModel.sharedInstance.writeFistTimeLaunch()
+		XCTAssertEqual(DataModel.sharedInstance.isFirstLaunch, false, "Not first time launch")
+	}
+	
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>ID</key>
+		<string>654</string>
+		<key>Finished</key>
+		<true/>
+		<key>Date</key>
+		<date>2015-01-17T15:16:02Z</date>
+		<key>Accounts</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Yarik</string>
+				<key>Balance</key>
+				<integer>200</integer>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Kolya</string>
+				<key>Balance</key>
+				<integer>986</integer>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Bogdan</string>
+				<key>Balance</key>
+				<integer>852</integer>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>ID</key>
+		<string>45646</string>
+		<key>Finished</key>
+		<false/>
+		<key>Date</key>
+		<date>2015-01-18T15:16:02Z</date>
+		<key>Accounts</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>Sasha</string>
+				<key>Balance</key>
+				<integer>400</integer>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>Dmytro</string>
+				<key>Balance</key>
+				<integer>560</integer>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

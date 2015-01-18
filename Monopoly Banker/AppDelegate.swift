@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor();
         pageControl.currentPageIndicatorTintColor = UIColor.blackColor();
         pageControl.backgroundColor = UIColor.whiteColor();
-        
+		
+		DataModel.sharedInstance.printSavedGames()
+		DataModel.sharedInstance.printFistTimeLaunch()
+		
+		DataModel.sharedInstance.startNewGame("Dima", "Dima4ka", "Dimasya")
+		DataModel.sharedInstance.printSavedGames()
+		DataModel.sharedInstance.saveGame()
+		
         // Override point for customization after application launch.
         return true
     }
