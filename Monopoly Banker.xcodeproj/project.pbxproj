@@ -19,6 +19,8 @@
 		151DAD141A6B355F0005D5F9 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD101A6B355F0005D5F9 /* page2.png */; };
 		151DAD151A6B355F0005D5F9 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD111A6B355F0005D5F9 /* page3.png */; };
 		151DAD161A6B355F0005D5F9 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 151DAD121A6B355F0005D5F9 /* page4.png */; };
+		158120D51A6B5EDD003580B0 /* LoadGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */; };
+		158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		151DAD101A6B355F0005D5F9 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
 		151DAD111A6B355F0005D5F9 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
 		151DAD121A6B355F0005D5F9 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewController.swift; path = "Load Game/LoadGameTableViewController.swift"; sourceTree = "<group>"; };
+		158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewCell.swift; path = "Load Game/LoadGameTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		151DACE51A6B261A0005D5F9 /* Monopoly Banker */ = {
 			isa = PBXGroup;
 			children = (
+				158120D31A6B5EAC003580B0 /* Load Game */,
 				151DAD081A6B2B9C0005D5F9 /* Tutorial */,
 				151DACE81A6B261A0005D5F9 /* AppDelegate.swift */,
 				151DACEA1A6B261A0005D5F9 /* ViewController.swift */,
@@ -152,6 +157,15 @@
 				151DAD121A6B355F0005D5F9 /* page4.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		158120D31A6B5EAC003580B0 /* Load Game */ = {
+			isa = PBXGroup;
+			children = (
+				158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */,
+				158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */,
+			);
+			name = "Load Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */,
+				158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */,
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				151DACE91A6B261A0005D5F9 /* AppDelegate.swift in Sources */,
 				151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */,
+				158120D51A6B5EDD003580B0 /* LoadGameTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
