@@ -165,6 +165,14 @@ class DataModel: NSObject {
 		writeGames()
 	}
 	
+	func deposit(amount : Int, name : String) {
+		currentGame?.deposit(amount, name: name)
+	}
+	
+	func charge(amount : Int, name : String) -> Bool {
+		return currentGame!.charge(amount, name: name)
+	}
+	
 	// MARK: - Helpers
 	
 	func getNumberOfActive() -> Int {

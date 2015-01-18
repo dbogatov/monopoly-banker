@@ -28,6 +28,11 @@
 		158120E91A6C3DBD003580B0 /* SavedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120E81A6C3DBD003580B0 /* SavedGame.swift */; };
 		158120EB1A6C3DF3003580B0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120EA1A6C3DF3003580B0 /* Account.swift */; };
 		15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A731A6C40B300A1D009 /* DataModel.swift */; };
+		15AA8A771A6C73F400A1D009 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A761A6C73F400A1D009 /* SoundController.swift */; };
+		15AA8A7A1A6C7CAA00A1D009 /* sampleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A791A6C7CAA00A1D009 /* sampleSound.wav */; };
+		15AA8A7E1A6C7E7300A1D009 /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A7B1A6C7E7300A1D009 /* ButtonTap.wav */; };
+		15AA8A7F1A6C7E7300A1D009 /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A7C1A6C7E7300A1D009 /* HallOfTheMountainKing.mp3 */; };
+		15AA8A801A6C7E7300A1D009 /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A7D1A6C7E7300A1D009 /* SecondBeep.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		158120E81A6C3DBD003580B0 /* SavedGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedGame.swift; path = Model/SavedGame.swift; sourceTree = "<group>"; };
 		158120EA1A6C3DF3003580B0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Model/Account.swift; sourceTree = "<group>"; };
 		15AA8A731A6C40B300A1D009 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = Model/DataModel.swift; sourceTree = "<group>"; };
+		15AA8A761A6C73F400A1D009 /* SoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundController.swift; path = Game/SoundController.swift; sourceTree = "<group>"; };
+		15AA8A791A6C7CAA00A1D009 /* sampleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sampleSound.wav; sourceTree = "<group>"; };
+		15AA8A7B1A6C7E7300A1D009 /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonTap.wav; sourceTree = "<group>"; };
+		15AA8A7C1A6C7E7300A1D009 /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
+		15AA8A7D1A6C7E7300A1D009 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SecondBeep.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +169,7 @@
 		151DAD171A6B35670005D5F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15AA8A781A6C7C9B00A1D009 /* Sounds */,
 				158120E21A6C053A003580B0 /* PLISTs */,
 				158120D81A6B65D4003580B0 /* Fonts */,
 				151DAD191A6B357B0005D5F9 /* Images */,
@@ -198,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				158120DD1A6B676A003580B0 /* GameViewController.swift */,
+				15AA8A761A6C73F400A1D009 /* SoundController.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -219,6 +231,17 @@
 				158120E51A6C177A003580B0 /* FirstTimeLaunch.plist */,
 			);
 			name = PLISTs;
+			sourceTree = "<group>";
+		};
+		15AA8A781A6C7C9B00A1D009 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				15AA8A7B1A6C7E7300A1D009 /* ButtonTap.wav */,
+				15AA8A7C1A6C7E7300A1D009 /* HallOfTheMountainKing.mp3 */,
+				15AA8A7D1A6C7E7300A1D009 /* SecondBeep.wav */,
+				15AA8A791A6C7CAA00A1D009 /* sampleSound.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +331,13 @@
 				151DAD151A6B355F0005D5F9 /* page3.png in Resources */,
 				158120DB1A6B661C003580B0 /* DS-DIGIB.TTF in Resources */,
 				151DAD161A6B355F0005D5F9 /* page4.png in Resources */,
+				15AA8A7F1A6C7E7300A1D009 /* HallOfTheMountainKing.mp3 in Resources */,
+				15AA8A7E1A6C7E7300A1D009 /* ButtonTap.wav in Resources */,
 				151DAD131A6B355F0005D5F9 /* page1.png in Resources */,
 				158120E61A6C177A003580B0 /* FirstTimeLaunch.plist in Resources */,
+				15AA8A801A6C7E7300A1D009 /* SecondBeep.wav in Resources */,
 				151DACF01A6B261A0005D5F9 /* Images.xcassets in Resources */,
+				15AA8A7A1A6C7CAA00A1D009 /* sampleSound.wav in Resources */,
 				151DAD141A6B355F0005D5F9 /* page2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +359,7 @@
 				158120DE1A6B676A003580B0 /* GameViewController.swift in Sources */,
 				151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */,
 				158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */,
+				15AA8A771A6C73F400A1D009 /* SoundController.swift in Sources */,
 				158120E91A6C3DBD003580B0 /* SavedGame.swift in Sources */,
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */,

@@ -45,6 +45,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="138" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="5DP-Mr-VWm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-2U-ooq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -61,6 +64,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="303" y="138" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="cMV-0D-lSC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK5-1g-DZd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -77,6 +83,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="521" y="138" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="9hj-r8-UvT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbD-N7-yny">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -93,6 +102,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="229" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="gZn-Hp-OAN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQs-zP-wU6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -109,6 +121,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="303" y="229" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="IHY-Q0-OYO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-Nk-5cv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -125,6 +140,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="521" y="229" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="1wz-Iu-Lac"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-pH-6Gx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -141,6 +159,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="320" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="oBZ-aj-CWb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IA-HI-Pk2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -157,6 +178,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="303" y="320" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="JAV-mO-WzK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ep-LZw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -173,6 +197,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="521" y="320" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="6Wg-4W-lKu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-If-AX0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -189,6 +216,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="411" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="multiplierButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="Nb2-Nl-5QA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-2u-Zb6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -205,6 +235,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="303" y="411" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zh2-US-ZTs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it2-Bd-LFX">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -221,6 +254,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="521" y="411" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="multiplierButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="0TC-1m-uEk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-WW-12D">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -237,6 +273,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="507" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zTx-M4-nMF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-QW-yYY">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -253,6 +292,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="303" y="507" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="Jsv-Fk-9te"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-Rl-ZQv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -269,6 +311,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="521" y="507" width="163" height="83"/>
                                 </variation>
+                                <connections>
+                                    <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zZ0-9j-79N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-Iu-h2Y">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -298,6 +343,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="619" width="267" height="141"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="TBz-UV-lJl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpw-0k-h1X">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -314,6 +362,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="417" y="619" width="267" height="141"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="EFC-H6-3v6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoL-GH-Com">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -330,6 +381,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="417" y="784" width="267" height="141"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="myC-lW-dbf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o48-aC-Orz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -359,6 +413,9 @@
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="95" y="784" width="267" height="141"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="Bes-nK-gRd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -416,6 +473,13 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="display" destination="E0O-rz-hhX" id="3vd-Im-dy7"/>
+                        <outlet property="player1" destination="vTW-Bk-k3F" id="jTJ-zV-c4Q"/>
+                        <outlet property="player2" destination="Bpw-0k-h1X" id="PuL-32-8q1"/>
+                        <outlet property="player3" destination="E0G-vQ-Glm" id="8l3-KZ-fuS"/>
+                        <outlet property="player4" destination="aoL-GH-Com" id="ZZf-w0-vix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr8-42-lE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
