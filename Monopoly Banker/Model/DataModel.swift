@@ -11,10 +11,12 @@ import UIKit
 class DataModel: NSObject {
 	
 	var savedGames : [SavedGame] = []
+	var isFirstLaunch : Bool = false
 	
 	override init() {
 		super.init()
 		readSavedGames()
+		readFistTimeLaunch()
 	}
 	
     class var sharedInstance : DataModel {
@@ -23,6 +25,8 @@ class DataModel: NSObject {
         }
         return Static.instance
     }
+	
+	// MARK: - Read functions
 	
 	func readSavedGames() {
 		savedGames.removeAll()
@@ -47,12 +51,24 @@ class DataModel: NSObject {
 		}
 	}
 	
+	func readFistTimeLaunch() {
+		if let path = NSBundle.mainBundle().pathForResource("FirstTimeLaunch", ofType: "plist") {
+			let dict : NSDictionary = NSDictionary(contentsOfFile: path)!
+			isFirstLaunch = dict["FirstTimeLaunch"] as Bool
+		}
+	}
+	
+	// MARK: - Print functions
+	
 	func printSavedGames() {
 		for game in savedGames {
 			print(game.description()+"\n ********** \n")
 		}
 	}
 	
+	func printFistTimeLaunch() {
+		println("First time launch: " + (isFirstLaunch ? "YES" : "NO"))
+	}
 	
 	
 }

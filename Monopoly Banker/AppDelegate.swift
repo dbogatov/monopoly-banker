@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.backgroundColor = UIColor.whiteColor();
 		
 		DataModel.sharedInstance.printSavedGames()
+		DataModel.sharedInstance.printFistTimeLaunch()
 		
         // Override point for customization after application launch.
         return true
