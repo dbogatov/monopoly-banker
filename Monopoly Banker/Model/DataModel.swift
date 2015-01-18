@@ -23,12 +23,12 @@ class DataModel: NSObject {
 		readFistTimeLaunch()
 	}
 	
-    class var sharedInstance : DataModel {
-        struct Static {
-            static let instance : DataModel = DataModel()
-        }
-        return Static.instance
-    }
+	class var sharedInstance : DataModel {
+		struct Static {
+			static let instance : DataModel = DataModel()
+		}
+		return Static.instance
+	}
 	
 	// MARK: - Seed functions
 	
@@ -139,7 +139,7 @@ class DataModel: NSObject {
 	func printFistTimeLaunch() {
 		println("First time launch: " + (isFirstLaunch ? "YES" : "NO"))
 	}
-
+	
 	// MARK: - Game functions
 	
 	func startNewGame(names : String...) {
@@ -165,68 +165,20 @@ class DataModel: NSObject {
 		writeGames()
 	}
 	
-}
+	// MARK: - Helpers
 	
-
-
-// MARK: - Supporting classes
-
-class SavedGame {
-	var ID : String
-	var finished : Bool
-	var date : NSDate
-	var accounts : [Account] = []
-	
-	
-	init(finished : Bool, date : NSDate, accounts : [Account]) {
-		self.finished = finished
-		self.date = date
-		self.accounts = accounts
-		self.ID = "\(NSDate().timeIntervalSince1970)"
-	}
-
-	convenience init(finished : Bool, date : NSDate, accounts : [Account], ID : String) {
-		self.init(finished: finished, date: date, accounts: accounts)
-		self.ID = ID
-	}
-	
-	func deposit(amount : Int, recipient : String) {
-		for acc in accounts {
-			if acc.name == recipient {
-				acc.deposit(amount)
+	func getNumberOfActive() -> Int {
+		var result : Int = 0
+		for game in savedGames {
+			if !game.finished {
+				result++
 			}
 		}
-	}
-	
-	func description() -> String {
-		var result : String = "";
-		
-		result += "ID: \(ID)\n"
-		result += "Finished: " + (finished ? "YES" : "NO") + "\n"
-		result += "Date: \(date)\n"
-		result += "Accounts:\n"
-		for acc in accounts {
-			result += "\t" + acc.description() + "\n"
-		}
-		
 		return result
 	}
-}
-
-class Account {
-	var name : String = ""
-	var balance : Int = 0
 	
-	init(name : String, balance : Int) {
-		self.name = name
-		self.balance = balance
+	func getNumberOfFinished() -> Int {
+		return savedGames.count - getNumberOfActive()
 	}
 	
-	func deposit(amount : Int) {
-		balance += amount
-	}
-	
-	func description() -> String {
-		return "\(name) : \(balance)"
-	}
 }

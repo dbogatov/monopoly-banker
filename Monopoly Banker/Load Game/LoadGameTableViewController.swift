@@ -10,6 +10,8 @@ import UIKit
 
 class LoadGameTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
 
+	var games : NSArray = DataModel.sharedInstance.savedGames
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,35 +25,36 @@ class LoadGameTableViewController: UITableViewController, UITableViewDelegate, U
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 2
+        return 1 // 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return section == 1 ? 2 : 3;
+        return  games.count //section == 0 ? DataModel.sharedInstance.getNumberOfActive() : DataModel.sharedInstance.getNumberOfFinished()
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("loadCell", forIndexPath: indexPath) as LoadGameTableViewCell;
 
-        cell.cellTitle.text = "fooo";
-        
+		cell.setGame(games[indexPath.row] as SavedGame)
+		cell.setParent(self)
+		
         return cell;
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         self.dismissViewControllerAnimated(true, completion: nil);
     }
-    
+	
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
