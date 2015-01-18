@@ -23,8 +23,6 @@ class PageContentViewController: UIViewController {
 
         self.backgroundImageView.image = UIImage(named: self.imageFileName);
         self.titleLabel.text = self.titleText;
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

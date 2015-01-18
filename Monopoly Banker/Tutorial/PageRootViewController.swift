@@ -13,7 +13,16 @@ class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
     
     @IBAction func startWalkthrough() {
         print("startWalkthrough");
+        
+        var startingViewController : PageContentViewController  = self.viewControllerAtIndex(0)!;
+        var viewControllers : NSArray = [startingViewController];
+        self.pageViewController?.setViewControllers(viewControllers, direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil);
     }
+    
+    @IBAction func exitTutorial() {
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    
     
     var pageViewController : UIPageViewController?
     var pageTitles : NSArray = [];
@@ -34,7 +43,7 @@ class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
         self.pageViewController!.setViewControllers(viewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil);
         
         // Change the size of page view controller
-        self.pageViewController!.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+        self.pageViewController!.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 50);
         
         self.addChildViewController(self.pageViewController!);
         self.view.addSubview(self.pageViewController!.view);
