@@ -21,6 +21,19 @@ class Account : NSObject {
 		balance += amount
 	}
 	
+	func charge(amount : Int) -> Bool {
+		if amount <= balance {
+			balance -= amount
+			return true
+		} else {
+			return false
+		}
+	}
+	
+	func getBalance() -> Int {
+		return balance
+	}
+		
 	func description() -> String {
 		return "\(name) : \(balance)"
 	}

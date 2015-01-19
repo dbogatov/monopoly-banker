@@ -27,12 +27,30 @@ class SavedGame : NSObject {
 		self.ID = ID
 	}
 	
-	func deposit(amount : Int, recipient : String) {
+	func deposit(amount : Int, name : String) {
 		for acc in accounts {
-			if acc.name == recipient {
+			if acc.name == name {
 				acc.deposit(amount)
 			}
 		}
+	}
+	
+	func charge(amount : Int, name : String) -> Bool {
+		for acc in accounts {
+			if acc.name == name {
+				return acc.charge(amount)
+			}
+		}
+		return false
+	}
+	
+	func getBalance(name : String) -> Int {
+		for acc in accounts {
+			if acc.name == name {
+				return acc.getBalance()
+			}
+		}
+		return -1
 	}
 	
 	func description() -> String {
