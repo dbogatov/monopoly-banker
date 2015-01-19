@@ -7,42 +7,113 @@
 //
 
 import UIKit
+import QuartzCore
 
 class GameViewController: UIViewController {
 
 	var cardObject : String = ""
 	var secondCard : String = ""
-	var displayAmount : Int = 0
+	
+	var displayAmount : Double = 0.0
 	var displayMultiplier : Multiplier = .N
+	var displayText : String = ""
+	
+	var dotExists : Bool = false
+	var decimalExists : Bool = false
 	
 	@IBOutlet weak var display: UILabel!
+	@IBOutlet weak var multiplier: UILabel!
 	
 	@IBOutlet weak var player1: UIButton!
 	@IBOutlet weak var player2: UIButton!
 	@IBOutlet weak var player3: UIButton!
 	@IBOutlet weak var player4: UIButton!
 	
-	@IBAction func buttonPressed(sender: UIButton) {
-		var number : Int = sender.titleLabel!.text!.toInt()!
-		var newNum : Int = displayAmount * 10 + number
-		
-		if newNum > 999 {
+	
+	@IBAction func backspacePressed(sender: UIButton) {
+		if displayText == "" || displayText == "" {
 			SoundController.sharedInstance.error()
+		} else if displayText.lastElement() == "." {
+			displayText = dropLast(displayText)
+			dotExists = false
+			
+			SoundController.sharedInstance.numberPressed()
+		} else if decimalExists {
+			displayText = dropLast(displayText)
+			decimalExists = false
+			
+			displayAmount = floor(displayAmount)
+			
+			SoundController.sharedInstance.numberPressed()
 		} else {
-			displayAmount = newNum
+			displayText = dropLast(displayText)
+			
+			displayAmount = floor(displayAmount / 10)
+			
 			SoundController.sharedInstance.numberPressed()
 		}
+		
+		updateDisplay()
+	}
+	
+	@IBAction func dotPressed(sender: UIButton) {
+		if cardObject != "" && displayMultiplier != .N {
+			dotExists = true
+			displayText += "."
+		} else {
+			SoundController.sharedInstance.error()
+		}
+		
+		updateDisplay()
+	}
+	
+	
+	@IBAction func buttonPressed(sender: UIButton) {
+		var number : Int = sender.titleLabel!.text!.toInt()!
+		
+		if cardObject != "" {
+			
+			if displayAmount == 0 && number == 0 {
+				SoundController.sharedInstance.error()
+			} else if decimalExists {
+				SoundController.sharedInstance.error()
+			} else if dotExists {
+				displayAmount += Double(number) * 0.1
+				decimalExists = true
+				displayText += "\(number)"
+				
+				SoundController.sharedInstance.numberPressed()
+			} else {
+				var newNum : Double = displayAmount * 10 + Double(number)
+				
+				if newNum > 999 {
+					SoundController.sharedInstance.error()
+				} else {
+					displayAmount = newNum
+					displayText += "\(number)"
+					
+					SoundController.sharedInstance.numberPressed()
+				}
+			}
+		} else {
+			SoundController.sharedInstance.error()
+		}
+		
 		updateDisplay()
 	}
 	
 	@IBAction func multiplierButtonPressed(sender: UIButton) {
-		switch sender.titleLabel!.text! {
-			case "K":
-				displayMultiplier = .K
-			case "M":
-				displayMultiplier = .M
-		default:
-				displayMultiplier = .N
+		if !dotExists && cardObject != "" {
+			switch sender.titleLabel!.text! {
+				case "K":
+					displayMultiplier = (displayMultiplier != .K ? .K : .N)
+				case "M":
+					displayMultiplier = (displayMultiplier != .M ? .M : .N)
+			default:
+					displayMultiplier = .N
+			}
+		} else {
+			SoundController.sharedInstance.error()
 		}
 		updateDisplay()
 	}
@@ -56,7 +127,8 @@ class GameViewController: UIViewController {
 					error = true
 				}
 			case "+":
-				DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
+				//DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
+				println("\nDisplayed number is \(getAmount())")
 			default:
 				if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
 					SoundController.sharedInstance.error()
@@ -71,6 +143,7 @@ class GameViewController: UIViewController {
 	}
 	
 	@IBAction func cardButtonPressed(sender: UIButton) {
+		sender.setHighlighted(true)
 		cardObject = sender.titleLabel!.text!
 	}
 	
@@ -83,26 +156,37 @@ class GameViewController: UIViewController {
 	func endTransaction() {
 		displayMultiplier = .N
 		displayAmount = 0
+		displayText = ""
+		
 		cardObject = ""
 		secondCard = ""
+		
+		dotExists = false
+		decimalExists = false
+		
+		player1.setHighlighted(false)
+		player2.setHighlighted(false)
+		player3.setHighlighted(false)
+		player4.setHighlighted(false)
+		
 		updateDisplay()
 	}
 	
 	func updateDisplay() {
-		var result : String = "\(displayAmount)"
+		display.text = displayText
+		
 		switch displayMultiplier {
 		case .M:
-			result += "M"
+			multiplier.text = "M"
 		case .K:
-			result += "K"
+			multiplier.text = "K"
 		default:
-			result += ""
+			multiplier.text = ""
 		}
-		display.text = result
 	}
 	
 	func getAmount() -> Int {
-		var result : Int = displayAmount
+		var result : Double = displayAmount
 		switch displayMultiplier {
 		case .K:
 			result *= 1000
@@ -112,7 +196,7 @@ class GameViewController: UIViewController {
 			result *= 1
 		}
 		
-		return result
+		return Int(result)
 	}
 	
 	func updateUI() {
@@ -129,25 +213,12 @@ class GameViewController: UIViewController {
 
         updateDisplay()
 		updateUI()
-		
     }
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 enum Multiplier {
