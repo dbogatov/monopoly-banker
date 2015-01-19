@@ -140,6 +140,12 @@ class DataModel: NSObject {
 		println("First time launch: " + (isFirstLaunch ? "YES" : "NO"))
 	}
 	
+	func printCurrentGame() {
+		println("**********")
+		println(currentGame!.description())
+		println("**********")
+	}
+	
 	// MARK: - Game functions
 	
 	func startNewGame(names : String...) {
@@ -167,10 +173,19 @@ class DataModel: NSObject {
 	
 	func deposit(amount : Int, name : String) {
 		currentGame?.deposit(amount, name: name)
+		
+		saveGame()
 	}
 	
 	func charge(amount : Int, name : String) -> Bool {
-		return currentGame!.charge(amount, name: name)
+		var result : Bool = currentGame!.charge(amount, name: name)
+		saveGame()
+		
+		return result
+	}
+	
+	func getBalance(name : String) -> Int {
+		return currentGame!.getBalance(name)
 	}
 	
 	// MARK: - Helpers

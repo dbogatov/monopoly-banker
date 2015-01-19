@@ -21,6 +21,8 @@ class GameViewController: UIViewController {
 	var dotExists : Bool = false
 	var decimalExists : Bool = false
 	
+	var allowForSecondCard : Bool = false
+	
 	@IBOutlet weak var display: UILabel!
 	@IBOutlet weak var multiplier: UILabel!
 	
@@ -57,9 +59,11 @@ class GameViewController: UIViewController {
 	}
 	
 	@IBAction func dotPressed(sender: UIButton) {
-		if cardObject != "" && displayMultiplier != .N {
+		if cardObject != "" && !dotExists {
 			dotExists = true
 			displayText += "."
+			
+			SoundController.sharedInstance.numberPressed()
 		} else {
 			SoundController.sharedInstance.error()
 		}
@@ -103,7 +107,7 @@ class GameViewController: UIViewController {
 	}
 	
 	@IBAction func multiplierButtonPressed(sender: UIButton) {
-		if !dotExists && cardObject != "" {
+		if cardObject != "" {
 			switch sender.titleLabel!.text! {
 				case "K":
 					displayMultiplier = (displayMultiplier != .K ? .K : .N)
@@ -112,6 +116,8 @@ class GameViewController: UIViewController {
 			default:
 					displayMultiplier = .N
 			}
+			
+			SoundController.sharedInstance.numberPressed()
 		} else {
 			SoundController.sharedInstance.error()
 		}
@@ -120,31 +126,52 @@ class GameViewController: UIViewController {
 	
 	@IBAction func actionButonPressed(sender: UIButton) {
 		var error : Bool = false
-		switch sender.titleLabel!.text! {
-			case "-":
-				if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
-					SoundController.sharedInstance.error()
-					error = true
-				}
-			case "+":
-				//DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
-				println("\nDisplayed number is \(getAmount())")
-			default:
-				if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
-					SoundController.sharedInstance.error()
-					error = true
-				}
-				DataModel.sharedInstance.deposit(getAmount(), name: secondCard)
+		
+		if cardObject != "" && !(dotExists && displayMultiplier == .N) {
+			switch sender.titleLabel!.text! {
+				case "-":
+					if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
+						error = true
+					}
+				case "+":
+					DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
+					//println("\nDisplayed number is \(getAmount())")
+				default:
+					allowForSecondCard = true
+					return
+			}
+		} else {
+			error = true
 		}
+		
 		if !error {
 			SoundController.sharedInstance.balanceChanged()
+			endTransaction()
+		} else {
+			SoundController.sharedInstance.error()
 		}
-		endTransaction()
 	}
 	
 	@IBAction func cardButtonPressed(sender: UIButton) {
-		sender.setHighlighted(true)
-		cardObject = sender.titleLabel!.text!
+		
+		if cardObject == "" {
+			sender.setHighlighted(true)
+			cardObject = sender.titleLabel!.text!
+			display.text = "\(convertAmount(DataModel.sharedInstance.getBalance(cardObject)))"
+		} else if cardObject == sender.titleLabel!.text! {
+			endTransaction()
+		} else if allowForSecondCard {
+			if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
+				SoundController.sharedInstance.error()
+			} else {
+				DataModel.sharedInstance.deposit(getAmount(), name: sender.titleLabel!.text!)
+			}
+			SoundController.sharedInstance.balanceChanged()
+			
+			endTransaction()
+		} else {
+			SoundController.sharedInstance.error()
+		}
 	}
 	
 	
@@ -154,6 +181,8 @@ class GameViewController: UIViewController {
     
 
 	func endTransaction() {
+		DataModel.sharedInstance.printCurrentGame()
+		
 		displayMultiplier = .N
 		displayAmount = 0
 		displayText = ""
@@ -163,6 +192,8 @@ class GameViewController: UIViewController {
 		
 		dotExists = false
 		decimalExists = false
+		
+		allowForSecondCard = false
 		
 		player1.setHighlighted(false)
 		player2.setHighlighted(false)
@@ -219,6 +250,20 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func convertAmount(number : Int) -> String {
+		if number > 999999 {
+			multiplier.text = "M"
+			println("Ammount: \(round(10 * (Double(number)/1000000))/10)")
+			return "\(round(10 * (Double(number)/1000000))/10 )"
+		} else if number > 999 {
+			multiplier.text = "K"
+			println("Ammount: \(round(10 * (Double(number)/1000))/10)")
+			return "\(round(10 * (Double(number)/1000))/10)"
+		} else {
+			return "\(number)"
+		}
+	}
 }
 
 enum Multiplier {

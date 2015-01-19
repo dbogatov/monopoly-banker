@@ -44,6 +44,15 @@ class SavedGame : NSObject {
 		return false
 	}
 	
+	func getBalance(name : String) -> Int {
+		for acc in accounts {
+			if acc.name == name {
+				return acc.getBalance()
+			}
+		}
+		return -1
+	}
+	
 	func description() -> String {
 		var result : String = "";
 		

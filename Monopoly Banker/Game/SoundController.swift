@@ -33,20 +33,14 @@ class SoundController: NSObject {
 	
 	func error() {
 		errorBeep.play()
-		
-		print("BEEP: Error")
 	}
 	
 	func numberPressed() {
 		numberBeep.play()
-		
-		print("BEEP: Number")
 	}
 	
 	func balanceChanged() {
-		changeBeep.play()
-		
-		print("BEEP: Change")
+		//changeBeep.play()
 	}
 	
 	func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {

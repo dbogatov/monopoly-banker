@@ -30,6 +30,10 @@ class Account : NSObject {
 		}
 	}
 	
+	func getBalance() -> Int {
+		return balance
+	}
+		
 	func description() -> String {
 		return "\(name) : \(balance)"
 	}
