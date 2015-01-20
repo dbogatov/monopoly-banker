@@ -10,20 +10,22 @@ import UIKit
 
 class SavedGame : NSObject {
 	var ID : String
+	var currency : String
 	var finished : Bool
 	var date : NSDate
 	var accounts : [Account] = []
 	
 	
-	init(finished : Bool, date : NSDate, accounts : [Account]) {
+	init(currency: String, finished : Bool, date : NSDate, accounts : [Account]) {
+		self.currency = currency
 		self.finished = finished
 		self.date = date
 		self.accounts = accounts
 		self.ID = "\(NSDate().timeIntervalSince1970)"
 	}
 	
-	convenience init(finished : Bool, date : NSDate, accounts : [Account], ID : String) {
-		self.init(finished: finished, date: date, accounts: accounts)
+	convenience init(currency : String, finished : Bool, date : NSDate, accounts : [Account], ID : String) {
+		self.init(currency: currency, finished: finished, date: date, accounts: accounts)
 		self.ID = ID
 	}
 	
@@ -57,6 +59,7 @@ class SavedGame : NSObject {
 		var result : String = "";
 		
 		result += "ID: \(ID)\n"
+		result += "Currency: \(currency)\n"
 		result += "Finished: " + (finished ? "YES" : "NO") + "\n"
 		result += "Date: \(date)\n"
 		result += "Accounts:\n"

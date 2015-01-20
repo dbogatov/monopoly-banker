@@ -15,9 +15,11 @@ class DataModel: NSObject {
 	var currentGame : SavedGame?
 	let initialBalance : Int = 15000
 	
+	var isGameSet : Bool = false
+	
 	override init() {
 		super.init()
-		seedFile("SavedGames", force: true)
+		seedFile("SavedGames", force: false)
 		seedFile("FirstTimeLaunch")
 		readSavedGames()
 		readFistTimeLaunch()
@@ -74,6 +76,7 @@ class DataModel: NSObject {
 		for game in sgArray {
 			
 			let ID : String = game["ID"] as String
+			let currency : String = game["Currency"] as String
 			let finished : Bool = game["Finished"] as Bool
 			let date : NSDate = game["Date"] as NSDate
 			let accountsDic : NSArray = game["Accounts"] as NSArray
@@ -83,7 +86,7 @@ class DataModel: NSObject {
 				accounts.append(Account(name: account["Name"] as String, balance: account["Balance"] as Int))
 			}
 			
-			savedGames.append(SavedGame(finished: finished, date: date, accounts: accounts, ID : ID))
+			savedGames.append(SavedGame(currency: currency, finished: finished, date: date, accounts: accounts, ID : ID))
 		}
 	}
 	
@@ -111,13 +114,14 @@ class DataModel: NSObject {
 			var record : NSMutableDictionary = [:]
 			
 			record.setValue(game.ID, forKey: "ID")
+			record.setValue(game.currency, forKey: "Currency")
 			record.setValue(game.finished, forKey: "Finished")
 			record.setValue(game.date, forKey: "Date")
 			
 			var accounts : [NSDictionary] = []
 			
 			for acc in game.accounts {
-				accounts.append([acc.name : acc.balance])
+				accounts.append(["Name" : acc.name, "Balance" : acc.balance])
 			}
 			
 			record.setValue(accounts, forKey: "Accounts")
@@ -148,13 +152,15 @@ class DataModel: NSObject {
 	
 	// MARK: - Game functions
 	
-	func startNewGame(names : String...) {
+	func startNewGame(currency: String, names : [String]) {
+		isGameSet = true
+		
 		var accounts : [Account] = []
 		for name in names {
 			accounts.append(Account(name: name, balance: initialBalance))
 		}
 		
-		currentGame = SavedGame(finished: false, date: NSDate(), accounts: accounts)
+		currentGame = SavedGame(currency: currency, finished: false, date: NSDate(), accounts: accounts)
 		
 		savedGames.append(currentGame!)
 	}

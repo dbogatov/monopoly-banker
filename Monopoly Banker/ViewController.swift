@@ -21,6 +21,10 @@ class ViewController: UIViewController {
 			performSegueWithIdentifier("tutorialSegue", sender: nil)
 		}
 		DataModel.sharedInstance.writeFistTimeLaunch()
+		
+		if DataModel.sharedInstance.isGameSet {
+			performSegueWithIdentifier("newGameSegue", sender: nil)
+		}
 	}
 	
     override func didReceiveMemoryWarning() {

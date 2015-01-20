@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>Currency</key>
+		<string>$</string>
 		<key>ID</key>
 		<string>654</string>
 		<key>Finished</key>
@@ -32,6 +34,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>Currency</key>
+		<string>$</string>
 		<key>ID</key>
 		<string>45646</string>
 		<key>Finished</key>

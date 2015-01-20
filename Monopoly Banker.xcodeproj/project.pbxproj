@@ -35,6 +35,8 @@
 		15AA8A941A6CA8CB00A1D009 /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A901A6CA8CB00A1D009 /* ButtonTap.wav */; };
 		15AA8A951A6CA8CB00A1D009 /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A911A6CA8CB00A1D009 /* SecondBeep.wav */; };
 		15AA8A971A6CB27000A1D009 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A961A6CB27000A1D009 /* StringExt.swift */; };
+		15AA8A991A6D857400A1D009 /* Chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A981A6D857400A1D009 /* Chip.png */; };
+		15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		15AA8A901A6CA8CB00A1D009 /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ButtonTap.wav; path = Resources/Sounds/ButtonTap.wav; sourceTree = "<group>"; };
 		15AA8A911A6CA8CB00A1D009 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = SecondBeep.wav; path = Resources/Sounds/SecondBeep.wav; sourceTree = "<group>"; };
 		15AA8A961A6CB27000A1D009 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExt.swift; path = Extensions/StringExt.swift; sourceTree = "<group>"; };
+		15AA8A981A6D857400A1D009 /* Chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chip.png; path = Resources/Images/Chip.png; sourceTree = "<group>"; };
+		15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupGameViewController.swift; path = Game/SetupGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 		151DAD191A6B357B0005D5F9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				15AA8A981A6D857400A1D009 /* Chip.png */,
 				15AA8A861A6CA8B400A1D009 /* page4.png */,
 				15AA8A871A6CA8B400A1D009 /* page3.png */,
 				15AA8A881A6CA8B400A1D009 /* page2.png */,
@@ -215,6 +220,7 @@
 			children = (
 				158120DD1A6B676A003580B0 /* GameViewController.swift */,
 				15AA8A761A6C73F400A1D009 /* SoundController.swift */,
+				15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				158120E61A6C177A003580B0 /* FirstTimeLaunch.plist in Resources */,
 				15AA8A851A6CA89D00A1D009 /* DS-DIGIB.TTF in Resources */,
 				15AA8A8B1A6CA8B400A1D009 /* page3.png in Resources */,
+				15AA8A991A6D857400A1D009 /* Chip.png in Resources */,
 				15AA8A8D1A6CA8B400A1D009 /* page1.png in Resources */,
 				151DACF01A6B261A0005D5F9 /* Images.xcassets in Resources */,
 			);
@@ -380,6 +387,7 @@
 				15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */,
 				15AA8A831A6CA86300A1D009 /* UIButtonExt.swift in Sources */,
 				158120EB1A6C3DF3003580B0 /* Account.swift in Sources */,
+				15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */,
 				151DACE91A6B261A0005D5F9 /* AppDelegate.swift in Sources */,
 				151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */,
 				158120D51A6B5EDD003580B0 /* LoadGameTableViewController.swift in Sources */,
