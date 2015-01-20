@@ -26,6 +26,11 @@ class SetupGameViewController: UIViewController {
 			DataModel.sharedInstance.startNewGame(currency, names: [player1.text, player2.text, player3.text, player4.text])
 			self.dismissViewControllerAnimated(true, completion: nil)
 		}
+
+	}
+	
+	@IBAction func backButtonPressed(sender: UIButton) {
+		self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 	func noDuplicateNames(names: String...) -> Bool {

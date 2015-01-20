@@ -29,6 +29,7 @@ class LoadGameTableViewCell: UITableViewCell {
 	
 	@IBAction func loadGame(sender: UIButton) {
 		DataModel.sharedInstance.loadGame(ID)
+		DataModel.sharedInstance.isGameSet = true
 		parent?.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
