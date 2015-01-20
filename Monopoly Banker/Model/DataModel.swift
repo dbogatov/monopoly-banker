@@ -194,6 +194,16 @@ class DataModel: NSObject {
 		return currentGame!.getBalance(name)
 	}
 	
+	func setStatusForID(ID : String, value : Bool) {
+		for game in savedGames {
+			if game.ID == ID {
+				game.finished = value
+			}
+		}
+		
+		saveGame()
+	}
+	
 	// MARK: - Helpers
 	
 	func getNumberOfActive() -> Int {
@@ -208,6 +218,10 @@ class DataModel: NSObject {
 	
 	func getNumberOfFinished() -> Int {
 		return savedGames.count - getNumberOfActive()
+	}
+	
+	func sortGames() {
+		savedGames.sort({ $0.sortingID > $1.sortingID})
 	}
 	
 }

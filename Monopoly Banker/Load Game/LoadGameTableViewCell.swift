@@ -27,6 +27,14 @@ class LoadGameTableViewCell: UITableViewCell {
 	@IBOutlet weak var balance4: UILabel!
 	
 	
+	@IBAction func backPressed(sender: UIButton) {
+		parent?.dismissViewControllerAnimated(true, completion: nil)
+	}
+	
+	@IBAction func switchChanged(sender: UISwitch) {
+		DataModel.sharedInstance.setStatusForID(ID, value: !sender.on)
+	}
+	
 	@IBAction func loadGame(sender: UIButton) {
 		DataModel.sharedInstance.loadGame(ID)
 		DataModel.sharedInstance.isGameSet = true
@@ -46,7 +54,7 @@ class LoadGameTableViewCell: UITableViewCell {
 	func setGame(game : SavedGame) {
 		ID = game.ID
 		setDate(game.date)
-		currentlyPlayingSwitch.setOn(game.finished, animated: false)
+		currentlyPlayingSwitch.setOn(!game.finished, animated: false)
 		
 		player1.text = game.accounts.count > 0 ? game.accounts[0].name : ""
 		player2.text = game.accounts.count > 1 ? game.accounts[1].name : ""

@@ -15,6 +15,7 @@ class SavedGame : NSObject {
 	var date : NSDate
 	var accounts : [Account] = []
 	
+	var sortingID : Int = 0
 	
 	init(currency: String, finished : Bool, date : NSDate, accounts : [Account]) {
 		self.currency = currency
@@ -22,6 +23,8 @@ class SavedGame : NSObject {
 		self.date = date
 		self.accounts = accounts
 		self.ID = "\(NSDate().timeIntervalSince1970)"
+		
+		self.sortingID = Int(date.timeIntervalSinceNow as Double)
 	}
 	
 	convenience init(currency : String, finished : Bool, date : NSDate, accounts : [Account], ID : String) {
