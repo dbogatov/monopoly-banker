@@ -38,15 +38,23 @@ class LoadGameTableViewController: UITableViewController, UITableViewDelegate, U
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return  games.count //section == 0 ? DataModel.sharedInstance.getNumberOfActive() : DataModel.sharedInstance.getNumberOfFinished()
+        return  games.count + 1 //section == 0 ? DataModel.sharedInstance.getNumberOfActive() : DataModel.sharedInstance.getNumberOfFinished()
     }
 
-    
+	override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		return (indexPath.row == 0 ? 100 : 133)
+	}
+	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("loadCell", forIndexPath: indexPath) as LoadGameTableViewCell;
 
-		cell.setGame(games[indexPath.row] as SavedGame)
+		var identifier : String = (indexPath.row == 0 ? "backCell" : "loadCell")
+		
+		var cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as LoadGameTableViewCell;
 		cell.setParent(self)
+		
+		if indexPath.row != 0 {
+			cell.setGame(games[indexPath.row - 1] as SavedGame)
+		}
 		
         return cell;
     }

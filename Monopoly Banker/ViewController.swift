@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 		if DataModel.sharedInstance.isGameSet {
 			performSegueWithIdentifier("newGameSegue", sender: nil)
 		}
+		
+		DataModel.sharedInstance.sortGames()
 	}
 	
     override func didReceiveMemoryWarning() {
