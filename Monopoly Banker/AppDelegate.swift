@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		DataModel.sharedInstance.printSavedGames()
 		DataModel.sharedInstance.printFistTimeLaunch()
 		
-		DataModel.sharedInstance.startNewGame("Dima", "Dima4ka", "Dimasya")
+		//DataModel.sharedInstance.startNewGame("$", names: ["Dima", "Dima4ka", "Dimasya"])
 		DataModel.sharedInstance.printSavedGames()
 		DataModel.sharedInstance.saveGame()
 		

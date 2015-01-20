@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
 	
 	@IBOutlet weak var display: UILabel!
 	@IBOutlet weak var multiplier: UILabel!
+	@IBOutlet weak var currency: UILabel!
 	
 	@IBOutlet weak var player1: UIButton!
 	@IBOutlet weak var player2: UIButton!
@@ -176,6 +177,7 @@ class GameViewController: UIViewController {
 	
 	
     @IBAction func saveAndExit() {
+		DataModel.sharedInstance.isGameSet = false
         self.dismissViewControllerAnimated(true, completion: nil);
     }
     
@@ -242,6 +244,8 @@ class GameViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
+		currency.text = DataModel.sharedInstance.currentGame!.currency
+		
         updateDisplay()
 		updateUI()
     }
