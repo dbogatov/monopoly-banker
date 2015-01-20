@@ -37,6 +37,8 @@
 		15AA8A971A6CB27000A1D009 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A961A6CB27000A1D009 /* StringExt.swift */; };
 		15AA8A991A6D857400A1D009 /* Chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A981A6D857400A1D009 /* Chip.png */; };
 		15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */; };
+		15AA8AA01A6DEA9A00A1D009 /* ExtrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */; };
+		15AA8AA31A6DEB4600A1D009 /* developer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8AA21A6DEB4600A1D009 /* developer.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		15AA8A961A6CB27000A1D009 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExt.swift; path = Extensions/StringExt.swift; sourceTree = "<group>"; };
 		15AA8A981A6D857400A1D009 /* Chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chip.png; path = Resources/Images/Chip.png; sourceTree = "<group>"; };
 		15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupGameViewController.swift; path = Game/SetupGameViewController.swift; sourceTree = "<group>"; };
+		15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtrasViewController.swift; path = Extras/ExtrasViewController.swift; sourceTree = "<group>"; };
+		15AA8AA21A6DEB4600A1D009 /* developer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = developer.jpg; path = Resources/Images/Extras/developer.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		151DACE51A6B261A0005D5F9 /* Monopoly Banker */ = {
 			isa = PBXGroup;
 			children = (
+				15AA8A9E1A6DEA5D00A1D009 /* Extras */,
 				15AA8A811A6CA74F00A1D009 /* Extensions */,
 				158120DF1A6BFF7D003580B0 /* Model */,
 				158120DC1A6B6748003580B0 /* Game */,
@@ -189,6 +194,7 @@
 		151DAD191A6B357B0005D5F9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				15AA8AA11A6DEB3600A1D009 /* Extras */,
 				15AA8A981A6D857400A1D009 /* Chip.png */,
 				15AA8A861A6CA8B400A1D009 /* page4.png */,
 				15AA8A871A6CA8B400A1D009 /* page3.png */,
@@ -262,6 +268,22 @@
 				15AA8A961A6CB27000A1D009 /* StringExt.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		15AA8A9E1A6DEA5D00A1D009 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		15AA8AA11A6DEB3600A1D009 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				15AA8AA21A6DEB4600A1D009 /* developer.jpg */,
+			);
+			name = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +369,7 @@
 			files = (
 				151DACEE1A6B261A0005D5F9 /* Main.storyboard in Resources */,
 				158120E41A6C0569003580B0 /* SavedGames.plist in Resources */,
+				15AA8AA31A6DEB4600A1D009 /* developer.jpg in Resources */,
 				15AA8A941A6CA8CB00A1D009 /* ButtonTap.wav in Resources */,
 				15AA8A931A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 in Resources */,
 				151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */,
@@ -387,6 +410,7 @@
 				15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */,
 				15AA8A831A6CA86300A1D009 /* UIButtonExt.swift in Sources */,
 				158120EB1A6C3DF3003580B0 /* Account.swift in Sources */,
+				15AA8AA01A6DEA9A00A1D009 /* ExtrasViewController.swift in Sources */,
 				15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */,
 				151DACE91A6B261A0005D5F9 /* AppDelegate.swift in Sources */,
 				151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */,
