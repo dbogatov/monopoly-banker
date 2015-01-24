@@ -12,6 +12,8 @@ class SetupGameViewController: UIViewController {
 
 	var currency : String = "$"
 	
+	@IBOutlet var paidCurrencies: [UIButton]!
+	
 	@IBOutlet weak var player1: UITextField!
 	@IBOutlet weak var player2: UITextField!
 	@IBOutlet weak var player3: UITextField!
@@ -34,7 +36,7 @@ class SetupGameViewController: UIViewController {
 	}
 	
 	func noDuplicateNames(names: String...) -> Bool {
-		
+		//TODO
 		
 		/*
 		if names[0] == names [1] || names [0] == [names[2] || names[0] == names[3] {
@@ -52,7 +54,9 @@ class SetupGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		for button in paidCurrencies {
+			button.enabled = InAppPurchasesController.sharedInstance.isPurchased()
+		}
     }
 
     override func didReceiveMemoryWarning() {

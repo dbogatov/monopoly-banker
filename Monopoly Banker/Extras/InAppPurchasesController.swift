@@ -11,6 +11,8 @@ import StoreKit
 
 class InAppPurchasesController: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
 	
+	var parent : ExtrasViewController?
+	
 	let productId : NSString = "currenciesAndNoAd";
 	var isPurchased : Bool?
 	
@@ -108,14 +110,18 @@ class InAppPurchasesController: NSObject, SKProductsRequestDelegate, SKPaymentTr
 					case .Purchased:
 						println("Product Purchased");
 						SKPaymentQueue.defaultQueue().finishTransaction(transaction as SKPaymentTransaction)
+						isPurchased = true
+						parent!.alertTransactionResult("Purchase Successfull")
 						break;
 					case .Failed:
 						println("Purchased Failed");
 						SKPaymentQueue.defaultQueue().finishTransaction(transaction as SKPaymentTransaction)
+						parent!.alertTransactionResult("Purchase Failed. Try again later.")
 						break;
 					case .Restored:
 						SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
 						SKPaymentQueue.defaultQueue().finishTransaction(transaction as SKPaymentTransaction)
+						parent!.alertTransactionResult("Your purchase is restored")
 					default:
 						break;
 				}
@@ -134,6 +140,7 @@ class InAppPurchasesController: NSObject, SKProductsRequestDelegate, SKPaymentTr
 			if prodID == productId {
 				isPurchased = true
 				println("Purchased!!!")
+				parent!.alertTransactionResult("Your purchase is restored")
 			}
 		}
 	}

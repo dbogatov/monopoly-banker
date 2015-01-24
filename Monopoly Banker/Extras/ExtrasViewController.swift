@@ -21,6 +21,7 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
 		buyButton.enabled = !InAppPurchasesController.sharedInstance.isPurchased()
 		restoreButton.enabled = !InAppPurchasesController.sharedInstance.isPurchased()
 		
+		InAppPurchasesController.sharedInstance.parent = self
         // Do any additional setup after loading the view.
     }
 
@@ -83,14 +84,10 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
 		controller.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	func alertTransactionResult(text: String) {
+		var alert = UIAlertController(title: "Transaction Info", message: text, preferredStyle: UIAlertControllerStyle.Alert)
+		alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
+		self.presentViewController(alert, animated: true, completion: nil)
+	}
 
 }
