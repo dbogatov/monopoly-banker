@@ -22,6 +22,10 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
         // Dispose of any resources that can be recreated.
     }
     
+	@IBAction func rateAppPressed(sender: UIButton) {
+		UIApplication.sharedApplication().openURL(NSURL(string: "http://google.com")!);
+	}
+	
 	@IBAction func feedbackPressed(sender: UIButton) {
 		let mailComposeViewController = configuredMailComposeViewController()
 		if MFMailComposeViewController.canSendMail() {
@@ -31,10 +35,20 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
 		}
 	}
 
-	
-	@IBAction func removeAdsPressed(sender: UIButton) {
+	@IBAction func restorePurchasesPressed(sender: UIButton) {
 	}
 	
+	@IBAction func removeAdsPressed(sender: UIButton) {
+		
+	}
+	
+	@IBAction func websitePressed(sender: UIButton) {
+		UIApplication.sharedApplication().openURL(NSURL(string: "https://vk.com/dima4ka007")!);
+	}
+	
+	@IBAction func facebookPressed(sender: UIButton) {
+		UIApplication.sharedApplication().openURL(NSURL(string: "https://www.facebook.com/Dima4ka007")!);
+	}
 	
 	@IBAction func backPressed(sender: UIButton) {
 		self.dismissViewControllerAnimated(true, completion: nil)
