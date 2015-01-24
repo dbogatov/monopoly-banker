@@ -11,9 +11,16 @@ import MessageUI
 
 class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
+	@IBOutlet weak var buyButton: UIButton!
+	@IBOutlet weak var restoreButton: UIButton!
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		buyButton.enabled = !InAppPurchasesController.sharedInstance.isPurchased()
+		restoreButton.enabled = !InAppPurchasesController.sharedInstance.isPurchased()
+		
         // Do any additional setup after loading the view.
     }
 
@@ -36,10 +43,11 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
 	}
 
 	@IBAction func restorePurchasesPressed(sender: UIButton) {
+		InAppPurchasesController.sharedInstance.restorePurchases()
 	}
 	
 	@IBAction func removeAdsPressed(sender: UIButton) {
-		
+		InAppPurchasesController.sharedInstance.buyConsumable()
 	}
 	
 	@IBAction func websitePressed(sender: UIButton) {

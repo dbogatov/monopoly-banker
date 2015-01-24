@@ -367,19 +367,6 @@
                                     <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-Iu-h2Y">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Save &amp; Exit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="570" y="966" width="182" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="ZDD-4S-GoV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTW-Bk-k3F">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -468,9 +455,28 @@
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
                                 <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="224" y="966" width="320" height="50"/>
+                                    <rect key="frame" x="68" y="966" width="320" height="50"/>
                                 </variation>
                             </adBannerView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-pb-QN1">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="390" y="966" width="320" height="50"/>
+                                </variation>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-Iu-h2Y">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save &amp; Exit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="623" y="933" width="136" height="25"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="ZDD-4S-GoV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -494,13 +500,14 @@
                                 <exclude reference="xxg-QW-yYY"/>
                                 <exclude reference="f9M-Rl-ZQv"/>
                                 <exclude reference="J37-fE-EjM"/>
-                                <exclude reference="ynl-Iu-h2Y"/>
                                 <exclude reference="vTW-Bk-k3F"/>
                                 <exclude reference="E0G-vQ-Glm"/>
                                 <exclude reference="Bpw-0k-h1X"/>
                                 <exclude reference="aoL-GH-Com"/>
                                 <exclude reference="LnM-Ni-VAo"/>
                                 <exclude reference="gPd-1S-Lpl"/>
+                                <exclude reference="Z6v-pb-QN1"/>
+                                <exclude reference="ynl-Iu-h2Y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -524,13 +531,14 @@
                                 <include reference="xxg-QW-yYY"/>
                                 <include reference="f9M-Rl-ZQv"/>
                                 <include reference="J37-fE-EjM"/>
-                                <include reference="ynl-Iu-h2Y"/>
                                 <include reference="vTW-Bk-k3F"/>
                                 <include reference="E0G-vQ-Glm"/>
                                 <include reference="Bpw-0k-h1X"/>
                                 <include reference="aoL-GH-Com"/>
                                 <include reference="LnM-Ni-VAo"/>
                                 <include reference="gPd-1S-Lpl"/>
+                                <include reference="Z6v-pb-QN1"/>
+                                <include reference="ynl-Iu-h2Y"/>
                             </mask>
                         </variation>
                     </view>
@@ -1326,6 +1334,10 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="buyButton" destination="j71-WZ-t0W" id="SXs-T9-4ea"/>
+                        <outlet property="restoreButton" destination="PSY-pM-lQc" id="R68-8F-HdN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lB-Tl-51D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
