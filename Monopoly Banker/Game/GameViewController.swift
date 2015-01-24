@@ -8,8 +8,9 @@
 
 import UIKit
 import QuartzCore
+import iAd
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, ADBannerViewDelegate {
 
 	var cardObject : String = ""
 	var secondCard : String = ""
@@ -32,6 +33,7 @@ class GameViewController: UIViewController {
 	@IBOutlet weak var player3: UIButton!
 	@IBOutlet weak var player4: UIButton!
 	
+	@IBOutlet var adBanners: [ADBannerView]!
 	
 	@IBAction func backspacePressed(sender: UIButton) {
 		if displayText == "" || displayText == "" {
@@ -241,11 +243,26 @@ class GameViewController: UIViewController {
 		player4.setTitle( (game.accounts.count > 3 ? game.accounts[3].name : ""), forState: UIControlState.Normal)
 	}
 	
+	func updateAds() {
+		if InAppPurchasesController.sharedInstance.isPurchased() {
+			for banner in adBanners {
+				banner.hidden = true
+			}
+		}
+	}
+	
+	func bannerViewWillLoadAd(banner: ADBannerView!) {
+		if banner.hidden && !InAppPurchasesController.sharedInstance.isPurchased() {
+			banner.hidden = false
+		}
+	}
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
 		currency.text = DataModel.sharedInstance.currentGame!.currency
 		
+		updateAds()
         updateDisplay()
 		updateUI()
     }

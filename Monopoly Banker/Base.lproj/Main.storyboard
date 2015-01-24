@@ -367,19 +367,6 @@
                                     <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-Iu-h2Y">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Save &amp; Exit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="570" y="966" width="182" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="ZDD-4S-GoV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTW-Bk-k3F">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -465,12 +452,37 @@
                                     <rect key="frame" x="95" y="28" width="92" height="84"/>
                                 </variation>
                             </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
+                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
                                 <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="224" y="966" width="320" height="50"/>
+                                    <rect key="frame" x="68" y="966" width="320" height="50"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="IHL-vh-DX3" id="QGF-wM-LNS"/>
+                                </connections>
                             </adBannerView>
+                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-pb-QN1">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="390" y="966" width="320" height="50"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="IHL-vh-DX3" id="W9l-Rd-7V4"/>
+                                </connections>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-Iu-h2Y">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save &amp; Exit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="623" y="933" width="136" height="25"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="ZDD-4S-GoV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -494,13 +506,14 @@
                                 <exclude reference="xxg-QW-yYY"/>
                                 <exclude reference="f9M-Rl-ZQv"/>
                                 <exclude reference="J37-fE-EjM"/>
-                                <exclude reference="ynl-Iu-h2Y"/>
                                 <exclude reference="vTW-Bk-k3F"/>
                                 <exclude reference="E0G-vQ-Glm"/>
                                 <exclude reference="Bpw-0k-h1X"/>
                                 <exclude reference="aoL-GH-Com"/>
                                 <exclude reference="LnM-Ni-VAo"/>
                                 <exclude reference="gPd-1S-Lpl"/>
+                                <exclude reference="Z6v-pb-QN1"/>
+                                <exclude reference="ynl-Iu-h2Y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -524,13 +537,14 @@
                                 <include reference="xxg-QW-yYY"/>
                                 <include reference="f9M-Rl-ZQv"/>
                                 <include reference="J37-fE-EjM"/>
-                                <include reference="ynl-Iu-h2Y"/>
                                 <include reference="vTW-Bk-k3F"/>
                                 <include reference="E0G-vQ-Glm"/>
                                 <include reference="Bpw-0k-h1X"/>
                                 <include reference="aoL-GH-Com"/>
                                 <include reference="LnM-Ni-VAo"/>
                                 <include reference="gPd-1S-Lpl"/>
+                                <include reference="Z6v-pb-QN1"/>
+                                <include reference="ynl-Iu-h2Y"/>
                             </mask>
                         </variation>
                     </view>
@@ -543,6 +557,7 @@
                         <outlet property="player2" destination="Bpw-0k-h1X" id="PuL-32-8q1"/>
                         <outlet property="player3" destination="E0G-vQ-Glm" id="8l3-KZ-fuS"/>
                         <outlet property="player4" destination="aoL-GH-Com" id="ZZf-w0-vix"/>
+                        <outletCollection property="adBanners" destination="gPd-1S-Lpl" collectionClass="NSMutableArray" id="vJa-kA-fP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr8-42-lE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -956,6 +971,82 @@
                                     <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="0x4-pv-PVe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggp-Ra-bfQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="€">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="268" y="649" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="jbW-QW-HIH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQQ-We-dnC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="¥">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="387" y="649" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="3sq-BU-hU9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIY-lU-BBQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="£">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="512" y="649" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="FMG-9M-lPQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zk-do-Caq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="₽">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="630" y="649" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="Xrz-ge-iqY"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as6-Gu-oYy">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="65"/>
@@ -967,6 +1058,120 @@
                                 </variation>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="u9Y-nS-gCU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYX-O0-ULd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="₩">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="757" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="ak1-Qi-rF0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtM-fw-Zgj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="௹">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="150" y="757" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="SCf-zF-cZ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IQ-7w-aQK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="₺">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="268" y="757" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="vuc-lp-jdm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEw-3C-ox4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="₪">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="387" y="757" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="Tf6-gR-nvp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnR-rQ-aLT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="₦">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="512" y="757" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="FH0-Yy-Cdb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS3-ZG-hNA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <state key="normal" title="₣">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="630" y="757" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="tvx-l2-BVG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1014,7 +1219,17 @@
                                 <exclude reference="nwg-WU-KfU"/>
                                 <exclude reference="GOK-YR-8Ts"/>
                                 <exclude reference="b8Z-Xp-ezn"/>
+                                <exclude reference="Ggp-Ra-bfQ"/>
+                                <exclude reference="YQQ-We-dnC"/>
+                                <exclude reference="iIY-lU-BBQ"/>
+                                <exclude reference="1zk-do-Caq"/>
                                 <exclude reference="as6-Gu-oYy"/>
+                                <exclude reference="ZYX-O0-ULd"/>
+                                <exclude reference="TtM-fw-Zgj"/>
+                                <exclude reference="3IQ-7w-aQK"/>
+                                <exclude reference="fEw-3C-ox4"/>
+                                <exclude reference="BnR-rQ-aLT"/>
+                                <exclude reference="eS3-ZG-hNA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -1060,7 +1275,17 @@
                                 <include reference="nwg-WU-KfU"/>
                                 <include reference="GOK-YR-8Ts"/>
                                 <include reference="b8Z-Xp-ezn"/>
+                                <include reference="Ggp-Ra-bfQ"/>
+                                <include reference="YQQ-We-dnC"/>
+                                <include reference="iIY-lU-BBQ"/>
+                                <include reference="1zk-do-Caq"/>
                                 <include reference="as6-Gu-oYy"/>
+                                <include reference="ZYX-O0-ULd"/>
+                                <include reference="TtM-fw-Zgj"/>
+                                <include reference="3IQ-7w-aQK"/>
+                                <include reference="fEw-3C-ox4"/>
+                                <include reference="BnR-rQ-aLT"/>
+                                <include reference="eS3-ZG-hNA"/>
                             </mask>
                         </variation>
                     </view>
@@ -1070,6 +1295,16 @@
                         <outlet property="player2" destination="7bg-mN-LUu" id="TJt-DH-1Lu"/>
                         <outlet property="player3" destination="a9y-Dh-ld9" id="ul7-mJ-5kC"/>
                         <outlet property="player4" destination="X7n-2J-NG0" id="szz-Q4-hPk"/>
+                        <outletCollection property="paidCurrencies" destination="1zk-do-Caq" collectionClass="NSMutableArray" id="36f-1O-Srv"/>
+                        <outletCollection property="paidCurrencies" destination="Ggp-Ra-bfQ" collectionClass="NSMutableArray" id="GuU-iZ-9vN"/>
+                        <outletCollection property="paidCurrencies" destination="YQQ-We-dnC" collectionClass="NSMutableArray" id="ZW4-Fv-SMt"/>
+                        <outletCollection property="paidCurrencies" destination="iIY-lU-BBQ" collectionClass="NSMutableArray" id="DIA-JT-5aJ"/>
+                        <outletCollection property="paidCurrencies" destination="ZYX-O0-ULd" collectionClass="NSMutableArray" id="Lgx-1Z-IeW"/>
+                        <outletCollection property="paidCurrencies" destination="TtM-fw-Zgj" collectionClass="NSMutableArray" id="39x-MH-bfx"/>
+                        <outletCollection property="paidCurrencies" destination="3IQ-7w-aQK" collectionClass="NSMutableArray" id="SFb-DX-U2x"/>
+                        <outletCollection property="paidCurrencies" destination="fEw-3C-ox4" collectionClass="NSMutableArray" id="fAf-2Y-pDe"/>
+                        <outletCollection property="paidCurrencies" destination="BnR-rQ-aLT" collectionClass="NSMutableArray" id="CMm-7E-7ei"/>
+                        <outletCollection property="paidCurrencies" destination="eS3-ZG-hNA" collectionClass="NSMutableArray" id="zua-D2-gQ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeT-ky-gu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1326,6 +1561,10 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="buyButton" destination="j71-WZ-t0W" id="SXs-T9-4ea"/>
+                        <outlet property="restoreButton" destination="PSY-pM-lQc" id="R68-8F-HdN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lB-Tl-51D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

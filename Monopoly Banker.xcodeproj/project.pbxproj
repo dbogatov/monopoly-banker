@@ -40,6 +40,8 @@
 		15AA8AA01A6DEA9A00A1D009 /* ExtrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */; };
 		15AA8AA31A6DEB4600A1D009 /* developer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8AA21A6DEB4600A1D009 /* developer.jpg */; };
 		15C935811A70C4BC00DCA3FA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C935801A70C4BC00DCA3FA /* iAd.framework */; };
+		15F7F7DA1A733C28007CE575 /* InAppPurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F7F7D91A733C28007CE575 /* InAppPurchasesController.swift */; };
+		15F7F7DC1A734353007CE575 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F7F7DB1A734353007CE575 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtrasViewController.swift; path = Extras/ExtrasViewController.swift; sourceTree = "<group>"; };
 		15AA8AA21A6DEB4600A1D009 /* developer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = developer.jpg; path = Resources/Images/Extras/developer.jpg; sourceTree = "<group>"; };
 		15C935801A70C4BC00DCA3FA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		15F7F7D91A733C28007CE575 /* InAppPurchasesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InAppPurchasesController.swift; path = Extras/InAppPurchasesController.swift; sourceTree = "<group>"; };
+		15F7F7DB1A734353007CE575 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C935811A70C4BC00DCA3FA /* iAd.framework in Frameworks */,
+				15F7F7DC1A734353007CE575 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +119,7 @@
 		151DACDA1A6B261A0005D5F9 = {
 			isa = PBXGroup;
 			children = (
+				15F7F7DB1A734353007CE575 /* StoreKit.framework */,
 				15C935801A70C4BC00DCA3FA /* iAd.framework */,
 				151DACE51A6B261A0005D5F9 /* Monopoly Banker */,
 				151DACFB1A6B261A0005D5F9 /* Monopoly BankerTests */,
@@ -278,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */,
+				15F7F7D91A733C28007CE575 /* InAppPurchasesController.swift */,
 			);
 			name = Extras;
 			sourceTree = "<group>";
@@ -340,6 +347,11 @@
 					151DACE21A6B261A0005D5F9 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 9VQ9QCTT5H;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					151DACF71A6B261A0005D5F9 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -407,6 +419,7 @@
 				158120DE1A6B676A003580B0 /* GameViewController.swift in Sources */,
 				15AA8A971A6CB27000A1D009 /* StringExt.swift in Sources */,
 				151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */,
+				15F7F7DA1A733C28007CE575 /* InAppPurchasesController.swift in Sources */,
 				158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */,
 				15AA8A771A6C73F400A1D009 /* SoundController.swift in Sources */,
 				158120E91A6C3DBD003580B0 /* SavedGame.swift in Sources */,
@@ -549,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -562,6 +576,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
