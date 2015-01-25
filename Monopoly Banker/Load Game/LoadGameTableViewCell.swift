@@ -54,8 +54,19 @@ class LoadGameTableViewCell: UITableViewCell {
 	func setGame(game : SavedGame) {
 		ID = game.ID
 		setDate(game.date)
-		currentlyPlayingSwitch.setOn(!game.finished, animated: false)
+		//currentlyPlayingSwitch.setOn(!game.finished, animated: false)
 		
+		player1.text = game.accounts[0].name
+		player2.text = game.accounts[1].name
+		player3.text = game.accounts[2].name
+		player4.text = game.accounts[3].name
+		
+		balance1.text = game.accounts[0].name != "" ? "\(game.accounts[0].balance)" : ""
+		balance2.text = game.accounts[1].name != "" ? "\(game.accounts[1].balance)" : ""
+		balance3.text = game.accounts[2].name != "" ? "\(game.accounts[2].balance)" : ""
+		balance4.text = game.accounts[3].name != "" ? "\(game.accounts[3].balance)" : ""
+		
+		/*
 		player1.text = game.accounts.count > 0 ? game.accounts[0].name : ""
 		player2.text = game.accounts.count > 1 ? game.accounts[1].name : ""
 		player3.text = game.accounts.count > 2 ? game.accounts[2].name : ""
@@ -65,6 +76,7 @@ class LoadGameTableViewCell: UITableViewCell {
 		balance2.text = game.accounts.count > 1 ? "\(game.accounts[1].balance)" : ""
 		balance3.text = game.accounts.count > 2 ? "\(game.accounts[2].balance)" : ""
 		balance4.text = game.accounts.count > 3 ? "\(game.accounts[3].balance)" : ""
+		*/
 	}
 	
 	override func awakeFromNib() {
