@@ -42,7 +42,7 @@ class LoadGameTableViewController: UITableViewController, UITableViewDelegate, U
     }
 
 	override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-		return (indexPath.row == 0 ? 100 : 133)
+		return (indexPath.row == 0 ? 100 : 135)
 	}
 	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        var pageControl : UIPageControl = UIPageControl.appearance();
-        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor();
-        pageControl.currentPageIndicatorTintColor = UIColor.blackColor();
-        pageControl.backgroundColor = UIColor.whiteColor();
+        var pageControl : UIPageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        pageControl.backgroundColor = UIColor.blueColor()
 		
 		DataModel.sharedInstance.printSavedGames()
 		DataModel.sharedInstance.printFistTimeLaunch()
