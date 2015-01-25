@@ -24,11 +24,14 @@ class SetupGameViewController: UIViewController {
 	}
 	
 	@IBAction func playPressed(sender: UIButton) {
-		if noDuplicateNames(player1.text, player2.text, player3.text, player4.text) {
+		if noDuplicateNames(player1.text, player2.text, player3.text, player4.text) == true {
 			DataModel.sharedInstance.startNewGame(currency, names: [player1.text, player2.text, player3.text, player4.text])
 			self.dismissViewControllerAnimated(true, completion: nil)
+		} else {
+			var alert = UIAlertController(title: "Invalid input", message: "You cannot have identical names", preferredStyle: UIAlertControllerStyle.Alert)
+			alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
 		}
-
 	}
 	
 	@IBAction func backButtonPressed(sender: UIButton) {
@@ -36,19 +39,18 @@ class SetupGameViewController: UIViewController {
 	}
 	
 	func noDuplicateNames(names: String...) -> Bool {
-		//TODO
 		
-		/*
-		if names[0] == names [1] || names [0] == [names[2] || names[0] == names[3] {
-			return false
-		} else if names[1] == names [2] || names [1] == [names[3] && names[1] != "" {
-			return false
-		} else if names[3] == names [4] && names[3] != "" {
-			return false
-		} else {
-			return true
-		}*/
-		return true
+		var set = NSMutableSet()
+		var objNum = 0
+		
+		for name in names {
+			if !name.isEmpty {
+				set.addObject(name.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
+				objNum++
+			}
+		}
+		
+		return set.count == objNum
 	}
 	
     override func viewDidLoad() {
@@ -63,16 +65,5 @@ class SetupGameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
