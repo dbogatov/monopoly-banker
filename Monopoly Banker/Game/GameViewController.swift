@@ -237,10 +237,36 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	func updateUI() {
 		var game : SavedGame = DataModel.sharedInstance.currentGame!
 		
+		if game.accounts[0].name.isEmpty {
+			player1.hidden = true
+		} else {
+			player1.setTitle(game.accounts[0].name, forState: UIControlState.Normal)
+		}
+		
+		if game.accounts[1].name.isEmpty {
+			player2.hidden = true
+		} else {
+			player2.setTitle(game.accounts[1].name, forState: UIControlState.Normal)
+		}
+		
+		if game.accounts[2].name.isEmpty {
+			player3.hidden = true
+		} else {
+			player3.setTitle(game.accounts[2].name, forState: UIControlState.Normal)
+		}
+		
+		if game.accounts[3].name.isEmpty {
+			player4.hidden = true
+		} else {
+			player4.setTitle(game.accounts[3].name, forState: UIControlState.Normal)
+		}
+		
+		/*
 		player1.setTitle( (game.accounts.count > 0 ? game.accounts[0].name : ""), forState: UIControlState.Normal)
 		player2.setTitle( (game.accounts.count > 1 ? game.accounts[1].name : ""), forState: UIControlState.Normal)
 		player3.setTitle( (game.accounts.count > 2 ? game.accounts[2].name : ""), forState: UIControlState.Normal)
 		player4.setTitle( (game.accounts.count > 3 ? game.accounts[3].name : ""), forState: UIControlState.Normal)
+		*/
 	}
 	
 	func updateAds() {
