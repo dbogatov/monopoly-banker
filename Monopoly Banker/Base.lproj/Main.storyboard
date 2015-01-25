@@ -1074,7 +1074,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="75"/>
-                                <state key="normal" title="₩">
+                                <state key="normal" title="₸">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1084,7 +1084,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="772" width="100" height="100"/>
+                                    <rect key="frame" x="38" y="772" width="100" height="102"/>
                                 </variation>
                                 <connections>
                                     <action selector="currencyPressed:" destination="Zas-8Q-OYt" eventType="touchUpInside" id="ak1-Qi-rF0"/>

@@ -11,6 +11,7 @@ import UIKit
 class SetupGameViewController: UIViewController {
 
 	var currency : String = "$"
+	var currrencyButton : UIButton?
 	
 	@IBOutlet var paidCurrencies: [UIButton]!
 	
@@ -20,7 +21,10 @@ class SetupGameViewController: UIViewController {
 	@IBOutlet weak var player4: UITextField!
 	
 	@IBAction func currencyPressed(sender: UIButton) {
+		currrencyButton?.setColor(UIColor.orangeColor(), state: UIControlState.Normal)
 		currency = sender.titleLabel!.text!
+		currrencyButton = sender
+		currrencyButton?.setColor(UIColor.greenColor(), state: UIControlState.Normal)
 	}
 	
 	@IBAction func playPressed(sender: UIButton) {
