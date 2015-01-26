@@ -15,6 +15,7 @@
 		151DACFF1A6B261A0005D5F9 /* Monopoly_BankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */; };
 		151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */; };
 		151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */; };
+		1543E4111A75E24400AADE42 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1543E4101A75E24400AADE42 /* dice.png */; };
 		158120D51A6B5EDD003580B0 /* LoadGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */; };
 		158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */; };
 		158120DE1A6B676A003580B0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120DD1A6B676A003580B0 /* GameViewController.swift */; };
@@ -67,6 +68,7 @@
 		151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monopoly_BankerTests.swift; sourceTree = "<group>"; };
 		151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = Tutorial/PageContentViewController.swift; sourceTree = "<group>"; };
 		151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageRootViewController.swift; path = Tutorial/PageRootViewController.swift; sourceTree = "<group>"; };
+		1543E4101A75E24400AADE42 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dice.png; path = Resources/Images/Startup/dice.png; sourceTree = "<group>"; };
 		158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewController.swift; path = "Load Game/LoadGameTableViewController.swift"; sourceTree = "<group>"; };
 		158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewCell.swift; path = "Load Game/LoadGameTableViewCell.swift"; sourceTree = "<group>"; };
 		158120DD1A6B676A003580B0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		151DAD191A6B357B0005D5F9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1543E40F1A75E1E800AADE42 /* Startup */,
 				15AA8AA11A6DEB3600A1D009 /* Extras */,
 				15AA8A981A6D857400A1D009 /* Chip.png */,
 				15AA8A861A6CA8B400A1D009 /* page4.png */,
@@ -212,6 +215,14 @@
 				15AA8A891A6CA8B400A1D009 /* page1.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		1543E40F1A75E1E800AADE42 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				1543E4101A75E24400AADE42 /* dice.png */,
+			);
+			name = Startup;
 			sourceTree = "<group>";
 		};
 		158120D31A6B5EAC003580B0 /* Load Game */ = {
@@ -387,6 +398,7 @@
 				158120E41A6C0569003580B0 /* SavedGames.plist in Resources */,
 				15AA8AA31A6DEB4600A1D009 /* developer.jpg in Resources */,
 				15AA8A941A6CA8CB00A1D009 /* ButtonTap.wav in Resources */,
+				1543E4111A75E24400AADE42 /* dice.png in Resources */,
 				15AA8A931A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 in Resources */,
 				151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */,
 				15AA8A8A1A6CA8B400A1D009 /* page4.png in Resources */,
