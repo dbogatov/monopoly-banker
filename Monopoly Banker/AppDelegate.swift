@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var pageControl : UIPageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
-        pageControl.backgroundColor = UIColor.blueColor()
+        pageControl.backgroundColor = UIColor(red: (105.0/255.0), green: (204.0/255.0), blue: (255.0/255.0), alpha: 1.0)
 		
 		DataModel.sharedInstance.printSavedGames()
 		DataModel.sharedInstance.printFistTimeLaunch()
