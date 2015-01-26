@@ -32,7 +32,7 @@ class SetupGameViewController: UIViewController {
 			DataModel.sharedInstance.startNewGame(currency, names: [player1.text, player2.text, player3.text, player4.text])
 			self.dismissViewControllerAnimated(true, completion: nil)
 		} else {
-			var alert = UIAlertController(title: "Invalid input", message: "You cannot have identical names", preferredStyle: UIAlertControllerStyle.Alert)
+			var alert = UIAlertController(title: "Invalid input", message: "You cannot have identical names or leave all fields empty", preferredStyle: UIAlertControllerStyle.Alert)
 			alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		}
@@ -54,7 +54,7 @@ class SetupGameViewController: UIViewController {
 			}
 		}
 		
-		return set.count == objNum
+		return set.count == objNum && objNum != 0;
 	}
 	
     override func viewDidLoad() {

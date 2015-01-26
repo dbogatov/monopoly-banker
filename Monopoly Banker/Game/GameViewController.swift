@@ -12,7 +12,16 @@ import iAd
 
 class GameViewController: UIViewController, ADBannerViewDelegate {
 
-	var cardObject : String = ""
+	var cardObject : String = "" {
+		willSet {
+			if cardObject != "" {
+				getButtonByName(cardObject)!.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+			}
+			if newValue != "" {
+				getButtonByName(newValue)!.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
+			}
+		}
+	}
 	var secondCard : String = ""
 	
 	var displayAmount : Double = 0.0
@@ -158,11 +167,12 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	@IBAction func cardButtonPressed(sender: UIButton) {
 		
 		if cardObject == "" {
-			sender.setHighlighted(true)
 			cardObject = sender.titleLabel!.text!
 			display.text = "\(convertAmount(DataModel.sharedInstance.getBalance(cardObject)))"
+			SoundController.sharedInstance.cardSwiped()
 		} else if cardObject == sender.titleLabel!.text! {
-			endTransaction()
+			SoundController.sharedInstance.cardSwiped()
+			endTransaction(delay: false)
 		} else if allowForSecondCard {
 			if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
 				SoundController.sharedInstance.error()
@@ -184,8 +194,10 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     }
     
 
-	func endTransaction() {
+	func endTransaction(delay: Bool = true) {
 		DataModel.sharedInstance.printCurrentGame()
+		
+		display.text = "\(convertAmount(DataModel.sharedInstance.getBalance(cardObject)))"
 		
 		displayMultiplier = .N
 		displayAmount = 0
@@ -204,19 +216,24 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		player3.setHighlighted(false)
 		player4.setHighlighted(false)
 		
-		updateDisplay()
+		if delay {
+			var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("updateDisplay"), userInfo: nil, repeats: false)
+		} else {
+			updateDisplay()
+		}
 	}
 	
 	func updateDisplay() {
+
 		display.text = displayText
 		
 		switch displayMultiplier {
-		case .M:
-			multiplier.text = "M"
-		case .K:
-			multiplier.text = "K"
-		default:
-			multiplier.text = ""
+			case .M:
+				multiplier.text = "M"
+			case .K:
+				multiplier.text = "K"
+			default:
+				multiplier.text = ""
 		}
 	}
 	
@@ -308,7 +325,22 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			println("Ammount: \(round(10 * (Double(number)/1000))/10)")
 			return "\(round(10 * (Double(number)/1000))/10)"
 		} else {
+			multiplier.text = ""
 			return "\(number)"
+		}
+	}
+	
+	func getButtonByName(name : String) -> UIButton? {
+		if player1.titleLabel!.text! == name {
+			return player1
+		} else if player2.titleLabel!.text! == name {
+			return player2
+		} else if player3.titleLabel!.text! == name {
+			return player3
+		} else if player4.titleLabel!.text! == name {
+			return player4
+		} else {
+			return nil
 		}
 	}
 }
