@@ -14,13 +14,15 @@ class SoundController: NSObject {
 	var errorBeep = AVAudioPlayer()
 	var numberBeep = AVAudioPlayer()
 	var changeBeep = AVAudioPlayer()
+	var cardBeep = AVAudioPlayer()
 	
 	override init() {
 		super.init()
 		
-		errorBeep = self.setupAudioPlayerWithFile("ButtonTap", type:"wav")
-		numberBeep = self.setupAudioPlayerWithFile("SecondBeep", type:"wav")
-		changeBeep = self.setupAudioPlayerWithFile("HallOfTheMountainKing", type:"mp3")
+		cardBeep = self.setupAudioPlayerWithFile("cardSwipe", type:"mp3")
+		errorBeep = self.setupAudioPlayerWithFile("errorSound", type:"wav")
+		numberBeep = self.setupAudioPlayerWithFile("ButtonTap", type:"wav")
+		changeBeep = self.setupAudioPlayerWithFile("cashSound", type:"mp3")
 	}
 	
 	class var sharedInstance : SoundController {
@@ -40,7 +42,11 @@ class SoundController: NSObject {
 	}
 	
 	func balanceChanged() {
-		//changeBeep.play()
+		changeBeep.play()
+	}
+	
+	func cardSwiped() {
+		cardBeep.play()
 	}
 	
 	func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {

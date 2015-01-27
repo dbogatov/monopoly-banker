@@ -15,6 +15,10 @@
 		151DACFF1A6B261A0005D5F9 /* Monopoly_BankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */; };
 		151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */; };
 		151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */; };
+		1543E4111A75E24400AADE42 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1543E4101A75E24400AADE42 /* dice.png */; };
+		1543E4151A75E8C000AADE42 /* errorSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1543E4141A75E8C000AADE42 /* errorSound.wav */; };
+		1543E4171A75EA4600AADE42 /* cashSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1543E4161A75EA4600AADE42 /* cashSound.mp3 */; };
+		1543E4191A75F98500AADE42 /* cardSwipe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1543E4181A75F98500AADE42 /* cardSwipe.mp3 */; };
 		158120D51A6B5EDD003580B0 /* LoadGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */; };
 		158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */; };
 		158120DE1A6B676A003580B0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120DD1A6B676A003580B0 /* GameViewController.swift */; };
@@ -30,10 +34,7 @@
 		15AA8A8B1A6CA8B400A1D009 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A871A6CA8B400A1D009 /* page3.png */; };
 		15AA8A8C1A6CA8B400A1D009 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A881A6CA8B400A1D009 /* page2.png */; };
 		15AA8A8D1A6CA8B400A1D009 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A891A6CA8B400A1D009 /* page1.png */; };
-		15AA8A921A6CA8CB00A1D009 /* sampleSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A8E1A6CA8CB00A1D009 /* sampleSound.wav */; };
-		15AA8A931A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A8F1A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 */; };
 		15AA8A941A6CA8CB00A1D009 /* ButtonTap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A901A6CA8CB00A1D009 /* ButtonTap.wav */; };
-		15AA8A951A6CA8CB00A1D009 /* SecondBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A911A6CA8CB00A1D009 /* SecondBeep.wav */; };
 		15AA8A971A6CB27000A1D009 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A961A6CB27000A1D009 /* StringExt.swift */; };
 		15AA8A991A6D857400A1D009 /* Chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8A981A6D857400A1D009 /* Chip.png */; };
 		15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */; };
@@ -67,6 +68,10 @@
 		151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monopoly_BankerTests.swift; sourceTree = "<group>"; };
 		151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = Tutorial/PageContentViewController.swift; sourceTree = "<group>"; };
 		151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageRootViewController.swift; path = Tutorial/PageRootViewController.swift; sourceTree = "<group>"; };
+		1543E4101A75E24400AADE42 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dice.png; path = Resources/Images/Startup/dice.png; sourceTree = "<group>"; };
+		1543E4141A75E8C000AADE42 /* errorSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = errorSound.wav; path = Resources/Sounds/errorSound.wav; sourceTree = "<group>"; };
+		1543E4161A75EA4600AADE42 /* cashSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cashSound.mp3; path = Resources/Sounds/cashSound.mp3; sourceTree = "<group>"; };
+		1543E4181A75F98500AADE42 /* cardSwipe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cardSwipe.mp3; path = Resources/Sounds/cardSwipe.mp3; sourceTree = "<group>"; };
 		158120D41A6B5EDD003580B0 /* LoadGameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewController.swift; path = "Load Game/LoadGameTableViewController.swift"; sourceTree = "<group>"; };
 		158120D61A6B60B6003580B0 /* LoadGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadGameTableViewCell.swift; path = "Load Game/LoadGameTableViewCell.swift"; sourceTree = "<group>"; };
 		158120DD1A6B676A003580B0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
@@ -82,10 +87,7 @@
 		15AA8A871A6CA8B400A1D009 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = page3.png; path = Resources/Images/page3.png; sourceTree = "<group>"; };
 		15AA8A881A6CA8B400A1D009 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = page2.png; path = Resources/Images/page2.png; sourceTree = "<group>"; };
 		15AA8A891A6CA8B400A1D009 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = page1.png; path = Resources/Images/page1.png; sourceTree = "<group>"; };
-		15AA8A8E1A6CA8CB00A1D009 /* sampleSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sampleSound.wav; path = Resources/Sounds/sampleSound.wav; sourceTree = "<group>"; };
-		15AA8A8F1A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = HallOfTheMountainKing.mp3; path = Resources/Sounds/HallOfTheMountainKing.mp3; sourceTree = "<group>"; };
 		15AA8A901A6CA8CB00A1D009 /* ButtonTap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ButtonTap.wav; path = Resources/Sounds/ButtonTap.wav; sourceTree = "<group>"; };
-		15AA8A911A6CA8CB00A1D009 /* SecondBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = SecondBeep.wav; path = Resources/Sounds/SecondBeep.wav; sourceTree = "<group>"; };
 		15AA8A961A6CB27000A1D009 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExt.swift; path = Extensions/StringExt.swift; sourceTree = "<group>"; };
 		15AA8A981A6D857400A1D009 /* Chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chip.png; path = Resources/Images/Chip.png; sourceTree = "<group>"; };
 		15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupGameViewController.swift; path = Game/SetupGameViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		151DAD191A6B357B0005D5F9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1543E40F1A75E1E800AADE42 /* Startup */,
 				15AA8AA11A6DEB3600A1D009 /* Extras */,
 				15AA8A981A6D857400A1D009 /* Chip.png */,
 				15AA8A861A6CA8B400A1D009 /* page4.png */,
@@ -212,6 +215,14 @@
 				15AA8A891A6CA8B400A1D009 /* page1.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		1543E40F1A75E1E800AADE42 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				1543E4101A75E24400AADE42 /* dice.png */,
+			);
+			name = Startup;
 			sourceTree = "<group>";
 		};
 		158120D31A6B5EAC003580B0 /* Load Game */ = {
@@ -263,10 +274,10 @@
 		15AA8A781A6C7C9B00A1D009 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				15AA8A8E1A6CA8CB00A1D009 /* sampleSound.wav */,
-				15AA8A8F1A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 */,
+				1543E4181A75F98500AADE42 /* cardSwipe.mp3 */,
+				1543E4161A75EA4600AADE42 /* cashSound.mp3 */,
+				1543E4141A75E8C000AADE42 /* errorSound.wav */,
 				15AA8A901A6CA8CB00A1D009 /* ButtonTap.wav */,
-				15AA8A911A6CA8CB00A1D009 /* SecondBeep.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -386,12 +397,12 @@
 				151DACEE1A6B261A0005D5F9 /* Main.storyboard in Resources */,
 				158120E41A6C0569003580B0 /* SavedGames.plist in Resources */,
 				15AA8AA31A6DEB4600A1D009 /* developer.jpg in Resources */,
+				1543E4151A75E8C000AADE42 /* errorSound.wav in Resources */,
 				15AA8A941A6CA8CB00A1D009 /* ButtonTap.wav in Resources */,
-				15AA8A931A6CA8CB00A1D009 /* HallOfTheMountainKing.mp3 in Resources */,
+				1543E4111A75E24400AADE42 /* dice.png in Resources */,
+				1543E4191A75F98500AADE42 /* cardSwipe.mp3 in Resources */,
 				151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */,
 				15AA8A8A1A6CA8B400A1D009 /* page4.png in Resources */,
-				15AA8A951A6CA8CB00A1D009 /* SecondBeep.wav in Resources */,
-				15AA8A921A6CA8CB00A1D009 /* sampleSound.wav in Resources */,
 				15AA8A8C1A6CA8B400A1D009 /* page2.png in Resources */,
 				158120E61A6C177A003580B0 /* FirstTimeLaunch.plist in Resources */,
 				15AA8A851A6CA89D00A1D009 /* DS-DIGIB.TTF in Resources */,
@@ -399,6 +410,7 @@
 				15AA8A991A6D857400A1D009 /* Chip.png in Resources */,
 				15AA8A8D1A6CA8B400A1D009 /* page1.png in Resources */,
 				151DACF01A6B261A0005D5F9 /* Images.xcassets in Resources */,
+				1543E4171A75EA4600AADE42 /* cashSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Monopoly Banker/Info.plist";
@@ -570,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Monopoly Banker/Info.plist";
