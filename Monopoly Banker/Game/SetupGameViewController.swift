@@ -21,10 +21,12 @@ class SetupGameViewController: UIViewController {
 	@IBOutlet weak var player4: UITextField!
 	
 	@IBAction func currencyPressed(sender: UIButton) {
-		currrencyButton?.setColor(UIColor.orangeColor(), state: UIControlState.Normal)
+        currrencyButton?.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+		//currrencyButton?.setColor(UIColor.orangeColor(), state: UIControlState.Normal)
 		currency = sender.titleLabel!.text!
 		currrencyButton = sender
-		currrencyButton?.setColor(UIColor.greenColor(), state: UIControlState.Normal)
+		//currrencyButton?.setColor(UIColor.greenColor(), state: UIControlState.Normal)
+        currrencyButton?.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
 	}
 	
 	@IBAction func playPressed(sender: UIButton) {
