@@ -29,9 +29,13 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	@IBAction func bitbucketPressed(sender: UIButton) {
+		UIApplication.sharedApplication().openURL(NSURL(string: "https://bitbucket.org/Dima4ka")!);
+	}
     
 	@IBAction func rateAppPressed(sender: UIButton) {
-		UIApplication.sharedApplication().openURL(NSURL(string: "http://google.com")!);
+		UIApplication.sharedApplication().openURL(NSURL(string: "http://apple.com")!);
 	}
 	
 	@IBAction func feedbackPressed(sender: UIButton) {
@@ -67,7 +71,7 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
 		let mailComposerVC = MFMailComposeViewController()
 		mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
 		
-		mailComposerVC.setToRecipients(["dbogatov@wpi.edu"])
+		mailComposerVC.setToRecipients(["bankergameapp@gmail.com"])
 		mailComposerVC.setSubject("Monopoly Banker Feedback")
 		mailComposerVC.setMessageBody("Dear Dmytro\n\n I am the user of your Monopoly Banker app and I want to provide a feedback.\n\n", isHTML: false)
 		

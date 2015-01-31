@@ -33,6 +33,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	
 	var allowForSecondCard : Bool = false
 	
+    @IBOutlet weak var errorLabel: UILabel!
+    
 	@IBOutlet weak var display: UILabel!
 	@IBOutlet weak var multiplier: UILabel!
 	@IBOutlet weak var currency: UILabel!
@@ -44,9 +46,11 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	
 	@IBOutlet var adBanners: [ADBannerView]!
 	
+    var errorHandler : ErrorHandler = ErrorHandler()
+    
 	@IBAction func backspacePressed(sender: UIButton) {
 		if displayText == "" || displayText == "" {
-			SoundController.sharedInstance.error()
+            errorHandler.displayErrorForAction(Error.NothingToRemove)
 		} else if displayText.lastElement() == "." {
 			displayText = dropLast(displayText)
 			dotExists = false
@@ -77,7 +81,11 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			
 			SoundController.sharedInstance.numberPressed()
 		} else {
-			SoundController.sharedInstance.error()
+            if cardObject == "" {
+                errorHandler.displayErrorForAction(Error.NoCardChosen)
+            } else {
+                errorHandler.displayErrorForAction(Error.DotExists)
+            }
 		}
 		
 		updateDisplay()
@@ -90,9 +98,9 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		if cardObject != "" {
 			
 			if displayAmount == 0 && number == 0 {
-				SoundController.sharedInstance.error()
+				errorHandler.displayErrorForAction(Error.ZeroItself)
 			} else if decimalExists {
-				SoundController.sharedInstance.error()
+				errorHandler.displayErrorForAction(Error.MaxDigitsReached)
 			} else if dotExists {
 				displayAmount += Double(number) * 0.1
 				decimalExists = true
@@ -103,7 +111,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 				var newNum : Double = displayAmount * 10 + Double(number)
 				
 				if newNum > 999 {
-					SoundController.sharedInstance.error()
+                    errorHandler.displayErrorForAction(Error.MaxDigitsReached)
 				} else {
 					displayAmount = newNum
 					displayText += "\(number)"
@@ -112,7 +120,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 				}
 			}
 		} else {
-			SoundController.sharedInstance.error()
+            errorHandler.displayErrorForAction(Error.NoCardChosen)
 		}
 		
 		updateDisplay()
@@ -131,36 +139,41 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			
 			SoundController.sharedInstance.numberPressed()
 		} else {
-			SoundController.sharedInstance.error()
+			errorHandler.displayErrorForAction(Error.NoCardChosen)
 		}
 		updateDisplay()
 	}
 	
 	@IBAction func actionButonPressed(sender: UIButton) {
-		var error : Bool = false
+		var error : Int = 0
 		
 		if cardObject != "" && !(dotExists && displayMultiplier == .N) {
 			switch sender.titleLabel!.text! {
 				case "-":
 					if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
-						error = true
+						error = 1
 					}
 				case "+":
 					DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
-					//println("\nDisplayed number is \(getAmount())")
 				default:
 					allowForSecondCard = true
 					return
 			}
 		} else {
-			error = true
+			error = 2
 		}
 		
-		if !error {
+		if error == 0 {
 			SoundController.sharedInstance.balanceChanged()
 			endTransaction()
 		} else {
-			SoundController.sharedInstance.error()
+			if cardObject == "" {
+				errorHandler.displayErrorForAction(Error.NoCardChosen)
+			} else if error == 1 {
+				errorHandler.displayErrorForAction(Error.NegativeBalance)
+			} else {
+				errorHandler.displayErrorForAction(Error.NoFractions)
+			}
 		}
 	}
 	
@@ -175,7 +188,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			endTransaction(delay: false)
 		} else if allowForSecondCard {
 			if !DataModel.sharedInstance.charge(getAmount(), name: cardObject) {
-				SoundController.sharedInstance.error()
+				errorHandler.displayErrorForAction(Error.NegativeBalance)
+				return
 			} else {
 				DataModel.sharedInstance.deposit(getAmount(), name: sender.titleLabel!.text!)
 			}
@@ -183,7 +197,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			
 			endTransaction()
 		} else {
-			SoundController.sharedInstance.error()
+			errorHandler.displayErrorForAction(Error.CardIsThere)
 		}
 	}
 	
@@ -277,13 +291,6 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		} else {
 			player4.setTitle(game.accounts[3].name, forState: UIControlState.Normal)
 		}
-		
-		/*
-		player1.setTitle( (game.accounts.count > 0 ? game.accounts[0].name : ""), forState: UIControlState.Normal)
-		player2.setTitle( (game.accounts.count > 1 ? game.accounts[1].name : ""), forState: UIControlState.Normal)
-		player3.setTitle( (game.accounts.count > 2 ? game.accounts[2].name : ""), forState: UIControlState.Normal)
-		player4.setTitle( (game.accounts.count > 3 ? game.accounts[3].name : ""), forState: UIControlState.Normal)
-		*/
 	}
 	
 	func updateAds() {
@@ -304,7 +311,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         super.viewDidLoad()
 
 		currency.text = DataModel.sharedInstance.currentGame!.currency
-		
+        errorHandler.setLabel(errorLabel)
+        
 		updateAds()
         updateDisplay()
 		updateUI()

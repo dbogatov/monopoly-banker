@@ -42,6 +42,7 @@
 		15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */; };
 		15AA8AA01A6DEA9A00A1D009 /* ExtrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */; };
 		15AA8AA31A6DEB4600A1D009 /* developer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15AA8AA21A6DEB4600A1D009 /* developer.jpg */; };
+		15B387521A7C7049002B62B3 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B387511A7C7049002B62B3 /* ErrorHandler.swift */; };
 		15C935811A70C4BC00DCA3FA /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C935801A70C4BC00DCA3FA /* iAd.framework */; };
 		15F7F7DA1A733C28007CE575 /* InAppPurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F7F7D91A733C28007CE575 /* InAppPurchasesController.swift */; };
 		15F7F7DC1A734353007CE575 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F7F7DB1A734353007CE575 /* StoreKit.framework */; };
@@ -97,6 +98,7 @@
 		15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupGameViewController.swift; path = Game/SetupGameViewController.swift; sourceTree = "<group>"; };
 		15AA8A9F1A6DEA9A00A1D009 /* ExtrasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtrasViewController.swift; path = Extras/ExtrasViewController.swift; sourceTree = "<group>"; };
 		15AA8AA21A6DEB4600A1D009 /* developer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = developer.jpg; path = Resources/Images/Extras/developer.jpg; sourceTree = "<group>"; };
+		15B387511A7C7049002B62B3 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorHandler.swift; path = Game/ErrorHandler.swift; sourceTree = "<group>"; };
 		15C935801A70C4BC00DCA3FA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		15F7F7D91A733C28007CE575 /* InAppPurchasesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InAppPurchasesController.swift; path = Extras/InAppPurchasesController.swift; sourceTree = "<group>"; };
 		15F7F7DB1A734353007CE575 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -249,6 +251,7 @@
 				158120DD1A6B676A003580B0 /* GameViewController.swift */,
 				15AA8A761A6C73F400A1D009 /* SoundController.swift */,
 				15AA8A9C1A6D9B4D00A1D009 /* SetupGameViewController.swift */,
+				15B387511A7C7049002B62B3 /* ErrorHandler.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				15F7F7DA1A733C28007CE575 /* InAppPurchasesController.swift in Sources */,
 				158120D71A6B60B6003580B0 /* LoadGameTableViewCell.swift in Sources */,
 				15AA8A771A6C73F400A1D009 /* SoundController.swift in Sources */,
+				15B387521A7C7049002B62B3 /* ErrorHandler.swift in Sources */,
 				158120E91A6C3DBD003580B0 /* SavedGame.swift in Sources */,
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */,
