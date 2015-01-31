@@ -4,9 +4,9 @@
 <array>
 	<dict>
 		<key>Currency</key>
-		<string>$</string>
+		<string>₴</string>
 		<key>ID</key>
-		<string>654</string>
+		<string>1</string>
 		<key>Finished</key>
 		<true/>
 		<key>Date</key>
@@ -15,64 +15,27 @@
 		<array>
 			<dict>
 				<key>Name</key>
-				<string>Meee</string>
+				<string>Mr. Red</string>
 				<key>Balance</key>
-				<integer>200</integer>
+				<integer>15000</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string>Yarik</string>
+				<string>Mr. Orange</string>
 				<key>Balance</key>
-				<integer>200</integer>
+				<integer>15000</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string>Kolya</string>
+				<string>Mr. Blue</string>
 				<key>Balance</key>
-				<integer>986</integer>
+				<integer>15000</integer>
 			</dict>
 			<dict>
 				<key>Name</key>
-				<string>Bogdan</string>
+				<string>Prof. Purple</string>
 				<key>Balance</key>
-				<integer>852</integer>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>Currency</key>
-		<string>$</string>
-		<key>ID</key>
-		<string>45646</string>
-		<key>Finished</key>
-		<false/>
-		<key>Date</key>
-		<date>2015-01-18T15:16:02Z</date>
-		<key>Accounts</key>
-		<array>
-			<dict>
-				<key>Name</key>
-				<string>Masha</string>
-				<key>Balance</key>
-				<integer>400</integer>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>Dasha</string>
-				<key>Balance</key>
-				<integer>400</integer>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>Sasha</string>
-				<key>Balance</key>
-				<integer>400</integer>
-			</dict>
-			<dict>
-				<key>Name</key>
-				<string>Dmytro</string>
-				<key>Balance</key>
-				<integer>560</integer>
+				<integer>15000</integer>
 			</dict>
 		</array>
 	</dict>

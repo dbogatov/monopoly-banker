@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
+class PageRootViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
+    @IBOutlet weak var infoLabel: UILabel!
     
     @IBAction func startWalkthrough() {
         print("startWalkthrough");
@@ -17,6 +18,7 @@ class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
         var startingViewController : PageContentViewController  = self.viewControllerAtIndex(0)!;
         var viewControllers : NSArray = [startingViewController];
         self.pageViewController?.setViewControllers(viewControllers, direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil);
+        infoLabel.text = pageTitles.firstObject as? String
     }
     
     @IBAction func exitTutorial() {
@@ -31,12 +33,24 @@ class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pageTitles = ["Over 200 Tips and Tricks", "Discover Hidden Features", "Bookmark Favorite Tip", "Free Regular Update"];
-        pageImages = ["page1.png", "page2.png", "page3.png", "page4.png"];
+        pageTitles =
+            [
+                "Welcome to Banker! This tool is designed to help you keep track of players' budgets easily.",
+                "You may setup a new game by telling us players' names and choosing a currency.",
+                "After game is setup, you may start depositing, charging and trasferring money among players.",
+                "Don't forget to choose a card first! 😉",
+                "All games are saved automatically. You may continue playing at any time.",
+                "If you want to unlock even more functionallity, provide feedback or get acquainted with the developer, welcome to Extras!"
+        ];
+        
+        pageImages = ["InitView.PNG", "Setup.PNG", "PlayCharge.PNG", "PlayTransfer.PNG", "Load.PNG", "Extras.PNG"];
+        
+        infoLabel.text = pageTitles.firstObject as? String
         
         // Create page view controller
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController")! as? UIPageViewController;
         self.pageViewController!.dataSource = self;
+        self.pageViewController!.delegate = self;
         
         var startingViewController : PageContentViewController  = self.viewControllerAtIndex(0)!;
         var viewControllers : NSArray = [startingViewController];
@@ -95,6 +109,11 @@ class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
         return 0;
     }
     
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
+        var page : PageContentViewController = pageViewController.viewControllers.first as PageContentViewController
+        infoLabel!.text = page.titleText
+    }
+    
     // MARK: Helper methods
     
     func viewControllerAtIndex(index: Int) -> PageContentViewController? {
@@ -107,7 +126,6 @@ class PageRootViewController: UIViewController, UIPageViewControllerDataSource {
         pageContentViewController.imageFileName = self.pageImages[index] as String;
         pageContentViewController.titleText = self.pageTitles[index] as String;
         pageContentViewController.pageIndex = index;
-
         
         return pageContentViewController;
     }
