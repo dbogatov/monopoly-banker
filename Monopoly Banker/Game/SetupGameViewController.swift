@@ -25,10 +25,8 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBAction func currencyPressed(sender: UIButton) {
         currrencyButton?.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-		//currrencyButton?.setColor(UIColor.orangeColor(), state: UIControlState.Normal)
 		currency = sender.titleLabel!.text!
 		currrencyButton = sender
-		//currrencyButton?.setColor(UIColor.greenColor(), state: UIControlState.Normal)
         currrencyButton?.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
 	}
 	
@@ -37,7 +35,7 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 			DataModel.sharedInstance.startNewGame(currency, names: [player1.text, player2.text, player3.text, player4.text])
 			self.dismissViewControllerAnimated(true, completion: nil)
 		} else {
-			var alert = UIAlertController(title: "Invalid input", message: "You cannot have identical names or leave all fields empty", preferredStyle: UIAlertControllerStyle.Alert)
+			var alert = UIAlertController(title: "Invalid input", message: "You cannot have identical names, leave all fields empty or play alone", preferredStyle: UIAlertControllerStyle.Alert)
 			alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
 		}
@@ -59,8 +57,10 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 			}
 		}
 		
-		return set.count == objNum && objNum != 0;
+		return set.count == objNum && objNum > 1;
 	}
+	
+	// MARK: - UITextField delegate methods
 	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		if textField === player1 {
@@ -71,13 +71,24 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 			player3.becomeFirstResponder()
 		} else if textField == player3 {
 			textField.resignFirstResponder()
-			player3.becomeFirstResponder()
+			player4.becomeFirstResponder()
 		} else if textField === player4 {
 			textField.resignFirstResponder()
 		}
 		
 		return true
 	}
+	
+	func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+		if range.length + range.location > countElements(textField.text) {
+			return false;
+		}
+		
+		let newLength : Int = countElements(textField.text) + countElements(string) - range.length;
+		return (newLength > 15) ? false : true;
+	}
+	
+	// MARK: - View Controller Life Cycle
 	
     override func viewDidLoad() {
         super.viewDidLoad()
