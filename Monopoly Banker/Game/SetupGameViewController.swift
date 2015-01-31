@@ -8,10 +8,13 @@
 
 import UIKit
 
-class SetupGameViewController: UIViewController {
+class SetupGameViewController: UIViewController, UITextFieldDelegate {
 
 	var currency : String = "$"
 	var currrencyButton : UIButton?
+	
+	@IBOutlet weak var loadingImage: UIImageView!
+	@IBOutlet weak var loadingLabel: UILabel!
 	
 	@IBOutlet var paidCurrencies: [UIButton]!
 	
@@ -59,13 +62,43 @@ class SetupGameViewController: UIViewController {
 		return set.count == objNum && objNum != 0;
 	}
 	
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		if textField === player1 {
+			textField.resignFirstResponder()
+			player2.becomeFirstResponder()
+		} else if textField === player2 {
+			textField.resignFirstResponder()
+			player3.becomeFirstResponder()
+		} else if textField == player3 {
+			textField.resignFirstResponder()
+			player3.becomeFirstResponder()
+		} else if textField === player4 {
+			textField.resignFirstResponder()
+		}
+		
+		return true
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		player1.delegate = self
+		player2.delegate = self
+		player3.delegate = self
+		player4.delegate = self
+		
+		let purchased = InAppPurchasesController.sharedInstance.isPurchased()
 		for button in paidCurrencies {
-			button.enabled = InAppPurchasesController.sharedInstance.isPurchased()
+			button.enabled = purchased
 		}
     }
+	
+	override func viewDidAppear(animated: Bool) {
+		loadingLabel.hidden = true
+		loadingImage.hidden = true
+		
+		player1.becomeFirstResponder()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

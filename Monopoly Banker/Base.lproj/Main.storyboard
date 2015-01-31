@@ -70,7 +70,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="138" width="200" height="83"/>
+                                    <rect key="frame" x="16" y="171" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="5DP-Mr-VWm"/>
@@ -91,7 +91,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="289" y="138" width="200" height="83"/>
+                                    <rect key="frame" x="289" y="171" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="cMV-0D-lSC"/>
@@ -112,7 +112,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="552" y="138" width="200" height="83"/>
+                                    <rect key="frame" x="552" y="171" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="9hj-r8-UvT"/>
@@ -152,7 +152,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="229" width="200" height="83"/>
+                                    <rect key="frame" x="16" y="262" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="gZn-Hp-OAN"/>
@@ -173,7 +173,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="289" y="229" width="200" height="83"/>
+                                    <rect key="frame" x="289" y="262" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="IHY-Q0-OYO"/>
@@ -194,7 +194,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="552" y="229" width="200" height="83"/>
+                                    <rect key="frame" x="552" y="262" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="1wz-Iu-Lac"/>
@@ -215,7 +215,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="320" width="200" height="83"/>
+                                    <rect key="frame" x="16" y="353" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="oBZ-aj-CWb"/>
@@ -236,7 +236,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="289" y="320" width="200" height="83"/>
+                                    <rect key="frame" x="289" y="353" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="JAV-mO-WzK"/>
@@ -257,7 +257,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="552" y="320" width="200" height="83"/>
+                                    <rect key="frame" x="552" y="353" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="6Wg-4W-lKu"/>
@@ -278,7 +278,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="411" width="200" height="83"/>
+                                    <rect key="frame" x="16" y="444" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="multiplierButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="Nb2-Nl-5QA"/>
@@ -299,7 +299,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="289" y="411" width="200" height="83"/>
+                                    <rect key="frame" x="289" y="444" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zh2-US-ZTs"/>
@@ -320,7 +320,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="552" y="411" width="200" height="83"/>
+                                    <rect key="frame" x="552" y="444" width="200" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="multiplierButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="0TC-1m-uEk"/>
@@ -341,7 +341,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="507" width="180" height="83"/>
+                                    <rect key="frame" x="16" y="540" width="180" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zTx-M4-nMF"/>
@@ -362,7 +362,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="228" y="507" width="180" height="83"/>
+                                    <rect key="frame" x="228" y="540" width="180" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="Jsv-Fk-9te"/>
@@ -383,7 +383,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="445" y="507" width="180" height="83"/>
+                                    <rect key="frame" x="445" y="540" width="180" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zZ0-9j-79N"/>
@@ -404,7 +404,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="652" y="507" width="100" height="83"/>
+                                    <rect key="frame" x="652" y="540" width="100" height="83"/>
                                 </variation>
                                 <connections>
                                     <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
@@ -424,7 +424,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="619" width="346" height="141"/>
+                                    <rect key="frame" x="16" y="652" width="346" height="141"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="TBz-UV-lJl"/>
@@ -444,7 +444,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="784" width="346" height="141"/>
+                                    <rect key="frame" x="16" y="817" width="346" height="141"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="Bes-nK-gRd"/>
@@ -464,7 +464,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="417" y="619" width="335" height="141"/>
+                                    <rect key="frame" x="417" y="652" width="335" height="141"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="EFC-H6-3v6"/>
@@ -484,7 +484,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="417" y="784" width="335" height="141"/>
+                                    <rect key="frame" x="417" y="817" width="335" height="141"/>
                                 </variation>
                                 <connections>
                                     <action selector="cardButtonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="myC-lW-dbf"/>
@@ -538,6 +538,15 @@
                                     <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="ZDD-4S-GoV"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o88-28-jEW">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="85" y="130" width="608" height="28"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.37254901959999998" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -570,6 +579,7 @@
                                 <exclude reference="gPd-1S-Lpl"/>
                                 <exclude reference="Z6v-pb-QN1"/>
                                 <exclude reference="ynl-Iu-h2Y"/>
+                                <exclude reference="o88-28-jEW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -602,6 +612,7 @@
                                 <include reference="gPd-1S-Lpl"/>
                                 <include reference="Z6v-pb-QN1"/>
                                 <include reference="ynl-Iu-h2Y"/>
+                                <include reference="o88-28-jEW"/>
                             </mask>
                         </variation>
                     </view>
@@ -609,6 +620,7 @@
                     <connections>
                         <outlet property="currency" destination="LnM-Ni-VAo" id="q87-SA-5wN"/>
                         <outlet property="display" destination="E0O-rz-hhX" id="3vd-Im-dy7"/>
+                        <outlet property="errorLabel" destination="o88-28-jEW" id="B0m-o8-KlC"/>
                         <outlet property="multiplier" destination="yew-he-7x1" id="Zoo-XN-Sk4"/>
                         <outlet property="player1" destination="vTW-Bk-k3F" id="jTJ-zV-c4Q"/>
                         <outlet property="player2" destination="Bpw-0k-h1X" id="PuL-32-8q1"/>
@@ -619,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr8-42-lE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1052" y="1522.5"/>
+            <point key="canvasLocation" x="-1034" y="1526.25"/>
         </scene>
         <!--Setup Game View Controller-->
         <scene sceneID="k5O-mA-CcI">
@@ -692,7 +704,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cardholder name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-dT-hyI">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="303" width="208" height="30"/>
                                 </variation>
@@ -792,7 +804,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cardholder name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-mN-LUu">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="414" y="303" width="208" height="30"/>
                                 </variation>
@@ -871,7 +883,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cardholder name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7n-2J-NG0">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="414" y="516" width="208" height="30"/>
                                 </variation>
@@ -950,7 +962,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cardholder name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9y-Dh-ld9">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="52" y="516" width="208" height="30"/>
                                 </variation>
@@ -1318,6 +1330,22 @@
                                     <rect key="frame" x="243" y="269" width="17" height="21"/>
                                 </variation>
                             </label>
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2A2-Km-3mc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBm-1E-cn7">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="25" y="415" width="719" height="194"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.4392156862745098" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -1377,6 +1405,8 @@
                                 <exclude reference="abJ-aE-lBf"/>
                                 <exclude reference="Jw4-O7-dtE"/>
                                 <exclude reference="ekG-6J-cPf"/>
+                                <exclude reference="2A2-Km-3mc"/>
+                                <exclude reference="eBm-1E-cn7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -1436,11 +1466,15 @@
                                 <include reference="abJ-aE-lBf"/>
                                 <include reference="Jw4-O7-dtE"/>
                                 <include reference="ekG-6J-cPf"/>
+                                <include reference="2A2-Km-3mc"/>
+                                <include reference="eBm-1E-cn7"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="loadingImage" destination="2A2-Km-3mc" id="k4S-Rv-dly"/>
+                        <outlet property="loadingLabel" destination="eBm-1E-cn7" id="623-oE-RG4"/>
                         <outlet property="player1" destination="eQY-dT-hyI" id="hHQ-QS-MFG"/>
                         <outlet property="player2" destination="7bg-mN-LUu" id="TJt-DH-1Lu"/>
                         <outlet property="player3" destination="a9y-Dh-ld9" id="ul7-mJ-5kC"/>
