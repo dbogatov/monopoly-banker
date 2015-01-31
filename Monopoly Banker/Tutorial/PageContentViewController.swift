@@ -22,6 +22,9 @@ class PageContentViewController: UIViewController {
         super.viewDidLoad()
 
         self.backgroundImageView.image = UIImage(named: self.imageFileName);
+        //self.backgroundImageView.layer.borderColor = UIColor.blueColor().CGColor
+        //self.backgroundImageView.layer.borderWidth = 2.0
+        
         self.titleLabel.text = self.titleText;
     }
 
