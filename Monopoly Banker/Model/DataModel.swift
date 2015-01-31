@@ -19,7 +19,7 @@ class DataModel: NSObject {
 	
 	override init() {
 		super.init()
-		seedFile("SavedGames", force: true)
+		seedFile("SavedGames", force: false)
 		seedFile("FirstTimeLaunch")
 		readSavedGames()
 		readFistTimeLaunch()
