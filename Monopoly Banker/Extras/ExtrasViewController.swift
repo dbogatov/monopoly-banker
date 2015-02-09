@@ -18,6 +18,8 @@ class ExtrasViewController: UIViewController, MFMailComposeViewControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		buyButton.titleLabel?.textAlignment = NSTextAlignment.Center
+		
 		buyButton.enabled = !InAppPurchasesController.sharedInstance.isPurchased()
 		restoreButton.enabled = !InAppPurchasesController.sharedInstance.isPurchased()
 		

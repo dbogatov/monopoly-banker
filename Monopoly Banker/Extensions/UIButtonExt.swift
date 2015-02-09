@@ -28,7 +28,7 @@ extension UIButton {
 	
 	func setHighlighted(flag : Bool) {
 		if flag {
-			self.layer.borderWidth = 5.0
+			self.layer.borderWidth = 3.0
 			self.layer.borderColor = UIColor.redColor().CGColor
 		} else {
 			self.layer.borderWidth = 0.0
