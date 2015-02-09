@@ -63,6 +63,8 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 	// MARK: - UITextField delegate methods
 	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		/*
 		if textField === player1 {
 			textField.resignFirstResponder()
 			player2.becomeFirstResponder()
@@ -75,7 +77,7 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 		} else if textField === player4 {
 			textField.resignFirstResponder()
 		}
-		
+		*/
 		return true
 	}
 	
