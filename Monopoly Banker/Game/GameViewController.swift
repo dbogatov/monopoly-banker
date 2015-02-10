@@ -321,7 +321,20 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		updateAds()
         updateDisplay()
 		updateUI()
+		
     }
+	
+	override func viewDidAppear(animated: Bool) {
+		
+		var alert = UIAlertController(title: "Important instruction", message: "Please, choose card before pressing any button. OK?", preferredStyle: UIAlertControllerStyle.Alert)
+		alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: nil))
+		alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {(action) in
+			var alert = UIAlertController(title: "Important instruction", message: "Banker will not work without card anyway, so please, choose the card first.", preferredStyle: UIAlertControllerStyle.Alert)
+			alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
+		}))
+		self.presentViewController(alert, animated: true, completion: nil)
+	}
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
