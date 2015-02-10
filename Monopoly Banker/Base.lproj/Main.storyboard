@@ -22,7 +22,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xzh-LE-3VD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gU2-uB-hyL">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-hd-IvE">
@@ -464,6 +464,31 @@
                                     <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zZ0-9j-79N"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J37-fE-EjM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="1" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <size key="titleShadowOffset" width="1" height="-1"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" red="0.074509803921568626" green="0.30588235294117649" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="652" y="540" width="100" height="83"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <rect key="frame" x="261" y="323" width="50" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTW-Bk-k3F">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -573,18 +598,6 @@
                                     <rect key="frame" x="16" y="24" width="55" height="55"/>
                                 </variation>
                             </label>
-                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
-                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="966" width="320" height="50"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-1" y="518" width="320" height="50"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="IHL-vh-DX3" id="QGF-wM-LNS"/>
-                                </connections>
-                            </adBannerView>
                             <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-pb-QN1">
                                 <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -632,31 +645,18 @@
                                     <rect key="frame" x="9" y="87" width="303" height="23"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J37-fE-EjM">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.6705882352941176" green="1" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <size key="titleShadowOffset" width="1" height="-1"/>
-                                <state key="normal" title=".">
-                                    <color key="titleColor" red="0.074509803921568626" green="0.30588235294117649" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="652" y="540" width="100" height="83"/>
+                                    <rect key="frame" x="16" y="966" width="320" height="50"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="261" y="323" width="50" height="45"/>
+                                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 </variation>
                                 <connections>
-                                    <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
+                                    <outlet property="delegate" destination="IHL-vh-DX3" id="QGF-wM-LNS"/>
                                 </connections>
-                            </button>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.37254901959999998" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -680,16 +680,16 @@
                                 <exclude reference="GV6-WW-12D"/>
                                 <exclude reference="xxg-QW-yYY"/>
                                 <exclude reference="f9M-Rl-ZQv"/>
+                                <exclude reference="J37-fE-EjM"/>
                                 <exclude reference="vTW-Bk-k3F"/>
                                 <exclude reference="E0G-vQ-Glm"/>
                                 <exclude reference="Bpw-0k-h1X"/>
                                 <exclude reference="aoL-GH-Com"/>
                                 <exclude reference="LnM-Ni-VAo"/>
-                                <exclude reference="gPd-1S-Lpl"/>
                                 <exclude reference="Z6v-pb-QN1"/>
                                 <exclude reference="ynl-Iu-h2Y"/>
                                 <exclude reference="o88-28-jEW"/>
-                                <exclude reference="J37-fE-EjM"/>
+                                <exclude reference="gPd-1S-Lpl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -713,16 +713,16 @@
                                 <include reference="GV6-WW-12D"/>
                                 <include reference="xxg-QW-yYY"/>
                                 <include reference="f9M-Rl-ZQv"/>
+                                <include reference="J37-fE-EjM"/>
                                 <include reference="vTW-Bk-k3F"/>
                                 <include reference="E0G-vQ-Glm"/>
                                 <include reference="Bpw-0k-h1X"/>
                                 <include reference="aoL-GH-Com"/>
                                 <include reference="LnM-Ni-VAo"/>
-                                <include reference="gPd-1S-Lpl"/>
                                 <include reference="Z6v-pb-QN1"/>
                                 <include reference="ynl-Iu-h2Y"/>
                                 <include reference="o88-28-jEW"/>
-                                <include reference="J37-fE-EjM"/>
+                                <include reference="gPd-1S-Lpl"/>
                             </mask>
                         </variation>
                     </view>
@@ -752,7 +752,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vur-e9-wdn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="olr-bp-dIi">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BwU-aO-yFe">
@@ -1804,7 +1804,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WqC-rC-CdF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YFa-Vc-VFp">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYJ-Ke-Svo">
@@ -2209,7 +2209,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6f-6f-Gc3">
@@ -2464,7 +2464,7 @@
             <objects>
                 <tableViewController id="Ris-zj-dzX" customClass="LoadGameTableViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="pUx-IC-xsf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
@@ -2780,7 +2780,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xhr-KZ-27a"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="he5-wc-lJb">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oQ-r4-O2c">
@@ -2879,7 +2879,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ChW-0e-yEx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="PageContentController" id="B6f-jC-pkq">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-ro-xIh">
