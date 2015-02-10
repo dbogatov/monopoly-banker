@@ -26,6 +26,7 @@
 		158120E61A6C177A003580B0 /* FirstTimeLaunch.plist in Resources */ = {isa = PBXBuildFile; fileRef = 158120E51A6C177A003580B0 /* FirstTimeLaunch.plist */; };
 		158120E91A6C3DBD003580B0 /* SavedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120E81A6C3DBD003580B0 /* SavedGame.swift */; };
 		158120EB1A6C3DF3003580B0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120EA1A6C3DF3003580B0 /* Account.swift */; };
+		158A33B51A8996E40002035D /* DigitalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A33B41A8996E40002035D /* DigitalLabel.swift */; };
 		159E4C9C1A7C627E00123F43 /* Extras.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E4C961A7C627E00123F43 /* Extras.PNG */; };
 		159E4C9D1A7C627E00123F43 /* Setup.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E4C971A7C627E00123F43 /* Setup.PNG */; };
 		159E4C9E1A7C627E00123F43 /* PlayCharge.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E4C981A7C627E00123F43 /* PlayCharge.PNG */; };
@@ -82,6 +83,7 @@
 		158120E51A6C177A003580B0 /* FirstTimeLaunch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FirstTimeLaunch.plist; path = Resources/PLISTs/FirstTimeLaunch.plist; sourceTree = "<group>"; };
 		158120E81A6C3DBD003580B0 /* SavedGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedGame.swift; path = Model/SavedGame.swift; sourceTree = "<group>"; };
 		158120EA1A6C3DF3003580B0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Model/Account.swift; sourceTree = "<group>"; };
+		158A33B41A8996E40002035D /* DigitalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DigitalLabel.swift; path = Extensions/DigitalLabel.swift; sourceTree = "<group>"; };
 		159E4C961A7C627E00123F43 /* Extras.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Extras.PNG; sourceTree = "<group>"; };
 		159E4C971A7C627E00123F43 /* Setup.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setup.PNG; sourceTree = "<group>"; };
 		159E4C981A7C627E00123F43 /* PlayCharge.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayCharge.PNG; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			children = (
 				15AA8A821A6CA86300A1D009 /* UIButtonExt.swift */,
 				15AA8A961A6CB27000A1D009 /* StringExt.swift */,
+				158A33B41A8996E40002035D /* DigitalLabel.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */,
 				15AA8A831A6CA86300A1D009 /* UIButtonExt.swift in Sources */,
+				158A33B51A8996E40002035D /* DigitalLabel.swift in Sources */,
 				158120EB1A6C3DF3003580B0 /* Account.swift in Sources */,
 				15AA8AA01A6DEA9A00A1D009 /* ExtrasViewController.swift in Sources */,
 				15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */,

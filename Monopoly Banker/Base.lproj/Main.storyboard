@@ -10,7 +10,6 @@
             <string>DS-Digital-Bold</string>
             <string>DS-Digital-Bold</string>
             <string>DS-Digital-Bold</string>
-            <string>DS-Digital-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -41,19 +40,6 @@
                                     <rect key="frame" x="8" y="20" width="303" height="63"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-rz-hhX">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="DS-Digital-Bold" family="DS-Digital" pointSize="110"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="195" y="28" width="247" height="84"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="DS-Digital-Bold" family="DS-Digital" pointSize="55"/>
-                                    <rect key="frame" x="57" y="23" width="126" height="58"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yew-he-7x1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="90"/>
@@ -63,8 +49,8 @@
                                     <rect key="frame" x="455" y="28" width="92" height="84"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
-                                    <rect key="frame" x="191" y="26" width="55" height="55"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="45"/>
+                                    <rect key="frame" x="199" y="26" width="47" height="52"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-q9-Dc6">
@@ -672,9 +658,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="346" y="966" width="77" height="50"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <rect key="frame" x="9" y="493" width="303" height="67"/>
@@ -683,12 +666,24 @@
                                     <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="hvh-x2-ru0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-rz-hhX" customClass="DigitalLabel" customModule="Monopoly_Banker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="195" y="28" width="247" height="84"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                    <rect key="frame" x="65" y="23" width="126" height="58"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.37254901959999998" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fwY-hd-IvE"/>
-                                <exclude reference="E0O-rz-hhX"/>
                                 <exclude reference="yew-he-7x1"/>
                                 <exclude reference="RpB-q9-Dc6"/>
                                 <exclude reference="XpF-2U-ooq"/>
@@ -717,12 +712,12 @@
                                 <exclude reference="o88-28-jEW"/>
                                 <exclude reference="gPd-1S-Lpl"/>
                                 <exclude reference="F0R-6y-Ldo"/>
+                                <exclude reference="E0O-rz-hhX"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="fwY-hd-IvE"/>
-                                <include reference="E0O-rz-hhX"/>
                                 <include reference="yew-he-7x1"/>
                                 <include reference="RpB-q9-Dc6"/>
                                 <include reference="XpF-2U-ooq"/>
@@ -750,6 +745,7 @@
                                 <include reference="ynl-Iu-h2Y"/>
                                 <include reference="o88-28-jEW"/>
                                 <include reference="gPd-1S-Lpl"/>
+                                <include reference="E0O-rz-hhX"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -2405,7 +2401,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dedicated to my parents" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jto-t2-WK7">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -2756,7 +2752,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0o4-d3-bbA"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC4-4L-SoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
