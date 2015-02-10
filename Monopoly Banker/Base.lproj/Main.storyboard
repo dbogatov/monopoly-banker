@@ -658,6 +658,31 @@
                                     <outlet property="delegate" destination="IHL-vh-DX3" id="QGF-wM-LNS"/>
                                 </connections>
                             </adBannerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-6y-Ldo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="1" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <size key="titleShadowOffset" width="1" height="-1"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.2470588235" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="346" y="966" width="77" height="50"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                    <rect key="frame" x="9" y="493" width="303" height="67"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="hvh-x2-ru0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.37254901959999998" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -691,6 +716,7 @@
                                 <exclude reference="ynl-Iu-h2Y"/>
                                 <exclude reference="o88-28-jEW"/>
                                 <exclude reference="gPd-1S-Lpl"/>
+                                <exclude reference="F0R-6y-Ldo"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -726,12 +752,19 @@
                                 <include reference="gPd-1S-Lpl"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="F0R-6y-Ldo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="currency" destination="LnM-Ni-VAo" id="q87-SA-5wN"/>
                         <outlet property="display" destination="E0O-rz-hhX" id="3vd-Im-dy7"/>
                         <outlet property="errorLabel" destination="o88-28-jEW" id="B0m-o8-KlC"/>
+                        <outlet property="exitButton" destination="ynl-Iu-h2Y" id="rZy-I6-maq"/>
+                        <outlet property="exitLargeButton" destination="F0R-6y-Ldo" id="6Qi-u1-ivq"/>
                         <outlet property="multiplier" destination="yew-he-7x1" id="Zoo-XN-Sk4"/>
                         <outlet property="player1" destination="vTW-Bk-k3F" id="jTJ-zV-c4Q"/>
                         <outlet property="player2" destination="Bpw-0k-h1X" id="PuL-32-8q1"/>

@@ -34,7 +34,10 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	var allowForSecondCard : Bool = false
 	
     @IBOutlet weak var errorLabel: UILabel!
+	
 	@IBOutlet weak var transferButton: UIButton!
+	@IBOutlet weak var exitButton: UIButton!
+	@IBOutlet weak var exitLargeButton: UIButton!
     
 	@IBOutlet weak var display: UILabel!
 	@IBOutlet weak var multiplier: UILabel!
@@ -303,6 +306,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			for banner in adBanners {
 				banner.hidden = true
 			}
+			exitButton.hidden = true
+			exitLargeButton.hidden = false
 		}
 	}
 	
@@ -327,12 +332,13 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	override func viewDidAppear(animated: Bool) {
 		
 		var alert = UIAlertController(title: "Important instruction", message: "Please, choose card before pressing any button. OK?", preferredStyle: UIAlertControllerStyle.Alert)
-		alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: nil))
+		/*
 		alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {(action) in
 			var alert = UIAlertController(title: "Important instruction", message: "Banker will not work without card anyway, so please, choose the card first.", preferredStyle: UIAlertControllerStyle.Alert)
 			alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
 			self.presentViewController(alert, animated: true, completion: nil)
-		}))
+		}))*/
+		alert.addAction(UIAlertAction(title: "Yes, I have read it", style: UIAlertActionStyle.Default, handler: nil))
 		self.presentViewController(alert, animated: true, completion: nil)
 	}
 	
