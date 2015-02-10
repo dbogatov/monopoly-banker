@@ -737,6 +737,7 @@
                         <outlet property="player2" destination="Bpw-0k-h1X" id="PuL-32-8q1"/>
                         <outlet property="player3" destination="E0G-vQ-Glm" id="8l3-KZ-fuS"/>
                         <outlet property="player4" destination="aoL-GH-Com" id="ZZf-w0-vix"/>
+                        <outlet property="transferButton" destination="xxg-QW-yYY" id="Hyf-63-MMJ"/>
                         <outletCollection property="adBanners" destination="gPd-1S-Lpl" collectionClass="NSMutableArray" id="vJa-kA-fP8"/>
                     </connections>
                 </viewController>

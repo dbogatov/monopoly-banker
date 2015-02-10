@@ -34,6 +34,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	var allowForSecondCard : Bool = false
 	
     @IBOutlet weak var errorLabel: UILabel!
+	@IBOutlet weak var transferButton: UIButton!
     
 	@IBOutlet weak var display: UILabel!
 	@IBOutlet weak var multiplier: UILabel!
@@ -157,6 +158,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 					DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
 				default:
 					allowForSecondCard = true
+					SoundController.sharedInstance.numberPressed()
+					transferButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
 					return
 			}
 		} else {
@@ -229,6 +232,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		player2.setHighlighted(false)
 		player3.setHighlighted(false)
 		player4.setHighlighted(false)
+		
+		transferButton.setTitleColor(UIColor(red: 19.0/255.0, green: 78.0/255.0, blue: 27.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
 		
 		if delay {
 			var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("updateDisplay"), userInfo: nil, repeats: false)
