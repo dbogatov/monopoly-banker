@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var dedicatedLabel: UILabel!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		
+		dedicatedLabel.hidden = true
     }
 
 	override func viewDidAppear(animated: Bool) {
