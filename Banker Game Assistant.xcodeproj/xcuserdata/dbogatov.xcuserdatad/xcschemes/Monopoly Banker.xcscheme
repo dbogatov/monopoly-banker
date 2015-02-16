@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "151DACE21A6B261A0005D5F9"
-               BuildableName = "Monopoly Banker.app"
-               BlueprintName = "Monopoly Banker"
-               ReferencedContainer = "container:Monopoly Banker.xcodeproj">
+               BuildableName = "Banker Game Assistant.app"
+               BlueprintName = "Banker Game Assistant"
+               ReferencedContainer = "container:Banker Game Assistant.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "151DACF71A6B261A0005D5F9"
-               BuildableName = "Monopoly BankerTests.xctest"
-               BlueprintName = "Monopoly BankerTests"
-               ReferencedContainer = "container:Monopoly Banker.xcodeproj">
+               BuildableName = "Banker Game AssistantTests.xctest"
+               BlueprintName = "Banker Game AssistantTests"
+               ReferencedContainer = "container:Banker Game Assistant.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "151DACF71A6B261A0005D5F9"
-               BuildableName = "Monopoly BankerTests.xctest"
-               BlueprintName = "Monopoly BankerTests"
-               ReferencedContainer = "container:Monopoly Banker.xcodeproj">
+               BuildableName = "Banker Game AssistantTests.xctest"
+               BlueprintName = "Banker Game AssistantTests"
+               ReferencedContainer = "container:Banker Game Assistant.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "151DACE21A6B261A0005D5F9"
-            BuildableName = "Monopoly Banker.app"
-            BlueprintName = "Monopoly Banker"
-            ReferencedContainer = "container:Monopoly Banker.xcodeproj">
+            BuildableName = "Banker Game Assistant.app"
+            BlueprintName = "Banker Game Assistant"
+            ReferencedContainer = "container:Banker Game Assistant.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "151DACE21A6B261A0005D5F9"
-            BuildableName = "Monopoly Banker.app"
-            BlueprintName = "Monopoly Banker"
-            ReferencedContainer = "container:Monopoly Banker.xcodeproj">
+            BuildableName = "Banker Game Assistant.app"
+            BlueprintName = "Banker Game Assistant"
+            ReferencedContainer = "container:Banker Game Assistant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "151DACE21A6B261A0005D5F9"
-            BuildableName = "Monopoly Banker.app"
-            BlueprintName = "Monopoly Banker"
-            ReferencedContainer = "container:Monopoly Banker.xcodeproj">
+            BuildableName = "Banker Game Assistant.app"
+            BlueprintName = "Banker Game Assistant"
+            ReferencedContainer = "container:Banker Game Assistant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

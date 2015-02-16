@@ -21,7 +21,7 @@ class PageContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.backgroundImageView.image = UIImage(named: self.imageFileName);
+        self.backgroundImageView.image = UIImage(named: "TutorialNumpad")//self.imageFileName);
         //self.backgroundImageView.layer.borderColor = UIColor.blueColor().CGColor
         //self.backgroundImageView.layer.borderWidth = 2.0
         
