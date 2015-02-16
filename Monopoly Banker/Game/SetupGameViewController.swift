@@ -64,20 +64,7 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
-		/*
-		if textField === player1 {
-			textField.resignFirstResponder()
-			player2.becomeFirstResponder()
-		} else if textField === player2 {
-			textField.resignFirstResponder()
-			player3.becomeFirstResponder()
-		} else if textField == player3 {
-			textField.resignFirstResponder()
-			player4.becomeFirstResponder()
-		} else if textField === player4 {
-			textField.resignFirstResponder()
-		}
-		*/
+		
 		return true
 	}
 	
@@ -103,6 +90,7 @@ class SetupGameViewController: UIViewController, UITextFieldDelegate {
 		let purchased = InAppPurchasesController.sharedInstance.isPurchased()
 		for button in paidCurrencies {
 			button.enabled = purchased
+			button.setTitleColor(purchased ? UIColor.blackColor() : UIColor.grayColor(), forState: UIControlState.Normal)
 		}
     }
 	

@@ -16,7 +16,7 @@
         <!--Game View Controller-->
         <scene sceneID="fax-eL-0cE">
             <objects>
-                <viewController id="IHL-vh-DX3" customClass="GameViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IHL-vh-DX3" customClass="GameViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XS7-BC-Yh7"/>
                         <viewControllerLayoutGuide type="bottom" id="Xzh-LE-3VD"/>
@@ -666,7 +666,7 @@
                                     <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="hvh-x2-ru0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-rz-hhX" customClass="DigitalLabel" customModule="Monopoly_Banker" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-rz-hhX" customClass="DigitalLabel" customModule="Banker_Game_Assistant" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="110"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -777,7 +777,7 @@
         <!--Setup Game View Controller-->
         <scene sceneID="k5O-mA-CcI">
             <objects>
-                <viewController id="Zas-8Q-OYt" customClass="SetupGameViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zas-8Q-OYt" customClass="SetupGameViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U40-7F-D3n"/>
                         <viewControllerLayoutGuide type="bottom" id="vur-e9-wdn"/>
@@ -1829,7 +1829,7 @@
         <!--Extras View Controller-->
         <scene sceneID="jmS-rO-QfB">
             <objects>
-                <viewController id="gPj-Ut-QE9" customClass="ExtrasViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gPj-Ut-QE9" customClass="ExtrasViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rtc-D9-DGe"/>
                         <viewControllerLayoutGuide type="bottom" id="WqC-rC-CdF"/>
@@ -2234,7 +2234,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -2459,7 +2459,7 @@
         <!--Load Game Table View Controller-->
         <scene sceneID="8II-jK-PMP">
             <objects>
-                <tableViewController id="Ris-zj-dzX" customClass="LoadGameTableViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ris-zj-dzX" customClass="LoadGameTableViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="pUx-IC-xsf">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2467,7 +2467,7 @@
                         <color key="separatorColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.3411764706" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="backCell" rowHeight="100" id="PYh-JE-9DM" customClass="LoadGameTableViewCell" customModule="Monopoly_Banker" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="backCell" rowHeight="100" id="PYh-JE-9DM" customClass="LoadGameTableViewCell" customModule="Banker_Game_Assistant" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PYh-JE-9DM" id="nnJ-Jr-N13">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -2541,7 +2541,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadCell" rowHeight="135" id="WZj-IQ-yV1" customClass="LoadGameTableViewCell" customModule="Monopoly_Banker" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadCell" rowHeight="135" id="WZj-IQ-yV1" customClass="LoadGameTableViewCell" customModule="Banker_Game_Assistant" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WZj-IQ-yV1" id="pHq-4D-ttc">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -2752,7 +2752,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0o4-d3-bbA"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC4-4L-SoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2771,7 +2770,7 @@
         <!--Page Root View Controller-->
         <scene sceneID="SN7-VX-WG6">
             <objects>
-                <viewController id="FSn-e4-GY8" customClass="PageRootViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FSn-e4-GY8" customClass="PageRootViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mf2-gj-mz7"/>
                         <viewControllerLayoutGuide type="bottom" id="xhr-KZ-27a"/>
@@ -2870,7 +2869,7 @@
         <!--Page Content View Controller-->
         <scene sceneID="t11-hc-aqX">
             <objects>
-                <viewController storyboardIdentifier="PageContentViewController" id="h8i-wI-bpF" customClass="PageContentViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" id="h8i-wI-bpF" customClass="PageContentViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a6B-hs-G4t"/>
                         <viewControllerLayoutGuide type="bottom" id="ChW-0e-yEx"/>
