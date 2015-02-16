@@ -12,7 +12,6 @@
 		151DACEE1A6B261A0005D5F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151DACEC1A6B261A0005D5F9 /* Main.storyboard */; };
 		151DACF01A6B261A0005D5F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151DACEF1A6B261A0005D5F9 /* Images.xcassets */; };
 		151DACF31A6B261A0005D5F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151DACF11A6B261A0005D5F9 /* LaunchScreen.xib */; };
-		151DACFF1A6B261A0005D5F9 /* Monopoly_BankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */; };
 		151DAD0C1A6B2F480005D5F9 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */; };
 		151DAD0E1A6B316D0005D5F9 /* PageRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DAD0D1A6B316D0005D5F9 /* PageRootViewController.swift */; };
 		1543E4111A75E24400AADE42 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1543E4101A75E24400AADE42 /* dice.png */; };
@@ -26,6 +25,7 @@
 		158120E61A6C177A003580B0 /* FirstTimeLaunch.plist in Resources */ = {isa = PBXBuildFile; fileRef = 158120E51A6C177A003580B0 /* FirstTimeLaunch.plist */; };
 		158120E91A6C3DBD003580B0 /* SavedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120E81A6C3DBD003580B0 /* SavedGame.swift */; };
 		158120EB1A6C3DF3003580B0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158120EA1A6C3DF3003580B0 /* Account.swift */; };
+		158A33B51A8996E40002035D /* DigitalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A33B41A8996E40002035D /* DigitalLabel.swift */; };
 		159E4C9C1A7C627E00123F43 /* Extras.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E4C961A7C627E00123F43 /* Extras.PNG */; };
 		159E4C9D1A7C627E00123F43 /* Setup.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E4C971A7C627E00123F43 /* Setup.PNG */; };
 		159E4C9E1A7C627E00123F43 /* PlayCharge.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 159E4C981A7C627E00123F43 /* PlayCharge.PNG */; };
@@ -59,14 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		151DACE31A6B261A0005D5F9 /* Monopoly Banker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monopoly Banker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		151DACE31A6B261A0005D5F9 /* Banker Game Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banker Game Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		151DACE71A6B261A0005D5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151DACE81A6B261A0005D5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		151DACEA1A6B261A0005D5F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		151DACED1A6B261A0005D5F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		151DACEF1A6B261A0005D5F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		151DACF21A6B261A0005D5F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		151DACF81A6B261A0005D5F9 /* Monopoly BankerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monopoly BankerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		151DACF81A6B261A0005D5F9 /* Banker Game AssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Banker Game AssistantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		151DACFD1A6B261A0005D5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151DACFE1A6B261A0005D5F9 /* Monopoly_BankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monopoly_BankerTests.swift; sourceTree = "<group>"; };
 		151DAD0B1A6B2F480005D5F9 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageContentViewController.swift; path = Tutorial/PageContentViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 		158120E51A6C177A003580B0 /* FirstTimeLaunch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FirstTimeLaunch.plist; path = Resources/PLISTs/FirstTimeLaunch.plist; sourceTree = "<group>"; };
 		158120E81A6C3DBD003580B0 /* SavedGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedGame.swift; path = Model/SavedGame.swift; sourceTree = "<group>"; };
 		158120EA1A6C3DF3003580B0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Model/Account.swift; sourceTree = "<group>"; };
+		158A33B41A8996E40002035D /* DigitalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DigitalLabel.swift; path = Extensions/DigitalLabel.swift; sourceTree = "<group>"; };
 		159E4C961A7C627E00123F43 /* Extras.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Extras.PNG; sourceTree = "<group>"; };
 		159E4C971A7C627E00123F43 /* Setup.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setup.PNG; sourceTree = "<group>"; };
 		159E4C981A7C627E00123F43 /* PlayCharge.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayCharge.PNG; sourceTree = "<group>"; };
@@ -138,8 +139,8 @@
 		151DACE41A6B261A0005D5F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				151DACE31A6B261A0005D5F9 /* Monopoly Banker.app */,
-				151DACF81A6B261A0005D5F9 /* Monopoly BankerTests.xctest */,
+				151DACE31A6B261A0005D5F9 /* Banker Game Assistant.app */,
+				151DACF81A6B261A0005D5F9 /* Banker Game AssistantTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,6 +305,7 @@
 			children = (
 				15AA8A821A6CA86300A1D009 /* UIButtonExt.swift */,
 				15AA8A961A6CB27000A1D009 /* StringExt.swift */,
+				158A33B41A8996E40002035D /* DigitalLabel.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -328,9 +330,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		151DACE21A6B261A0005D5F9 /* Monopoly Banker */ = {
+		151DACE21A6B261A0005D5F9 /* Banker Game Assistant */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 151DAD021A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Monopoly Banker" */;
+			buildConfigurationList = 151DAD021A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Banker Game Assistant" */;
 			buildPhases = (
 				151DACDF1A6B261A0005D5F9 /* Sources */,
 				151DACE01A6B261A0005D5F9 /* Frameworks */,
@@ -340,14 +342,14 @@
 			);
 			dependencies = (
 			);
-			name = "Monopoly Banker";
+			name = "Banker Game Assistant";
 			productName = "Monopoly Banker";
-			productReference = 151DACE31A6B261A0005D5F9 /* Monopoly Banker.app */;
+			productReference = 151DACE31A6B261A0005D5F9 /* Banker Game Assistant.app */;
 			productType = "com.apple.product-type.application";
 		};
-		151DACF71A6B261A0005D5F9 /* Monopoly BankerTests */ = {
+		151DACF71A6B261A0005D5F9 /* Banker Game AssistantTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 151DAD051A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Monopoly BankerTests" */;
+			buildConfigurationList = 151DAD051A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Banker Game AssistantTests" */;
 			buildPhases = (
 				151DACF41A6B261A0005D5F9 /* Sources */,
 				151DACF51A6B261A0005D5F9 /* Frameworks */,
@@ -358,9 +360,9 @@
 			dependencies = (
 				151DACFA1A6B261A0005D5F9 /* PBXTargetDependency */,
 			);
-			name = "Monopoly BankerTests";
+			name = "Banker Game AssistantTests";
 			productName = "Monopoly BankerTests";
-			productReference = 151DACF81A6B261A0005D5F9 /* Monopoly BankerTests.xctest */;
+			productReference = 151DACF81A6B261A0005D5F9 /* Banker Game AssistantTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -387,7 +389,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 151DACDE1A6B261A0005D5F9 /* Build configuration list for PBXProject "Monopoly Banker" */;
+			buildConfigurationList = 151DACDE1A6B261A0005D5F9 /* Build configuration list for PBXProject "Banker Game Assistant" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -400,8 +402,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				151DACE21A6B261A0005D5F9 /* Monopoly Banker */,
-				151DACF71A6B261A0005D5F9 /* Monopoly BankerTests */,
+				151DACE21A6B261A0005D5F9 /* Banker Game Assistant */,
+				151DACF71A6B261A0005D5F9 /* Banker Game AssistantTests */,
 			);
 		};
 /* End PBXProject section */
@@ -458,6 +460,7 @@
 				151DACEB1A6B261A0005D5F9 /* ViewController.swift in Sources */,
 				15AA8A741A6C40B300A1D009 /* DataModel.swift in Sources */,
 				15AA8A831A6CA86300A1D009 /* UIButtonExt.swift in Sources */,
+				158A33B51A8996E40002035D /* DigitalLabel.swift in Sources */,
 				158120EB1A6C3DF3003580B0 /* Account.swift in Sources */,
 				15AA8AA01A6DEA9A00A1D009 /* ExtrasViewController.swift in Sources */,
 				15AA8A9D1A6D9B4D00A1D009 /* SetupGameViewController.swift in Sources */,
@@ -471,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				151DACFF1A6B261A0005D5F9 /* Monopoly_BankerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +482,7 @@
 /* Begin PBXTargetDependency section */
 		151DACFA1A6B261A0005D5F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 151DACE21A6B261A0005D5F9 /* Monopoly Banker */;
+			target = 151DACE21A6B261A0005D5F9 /* Banker Game Assistant */;
 			targetProxy = 151DACF91A6B261A0005D5F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -592,8 +594,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Monopoly Banker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Banker Game Assistant";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -607,8 +610,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Monopoly Banker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Banker Game Assistant";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -628,7 +632,7 @@
 				);
 				INFOPLIST_FILE = "Monopoly BankerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Banker Game AssistantTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly Banker.app/Monopoly Banker";
 			};
 			name = Debug;
@@ -643,7 +647,7 @@
 				);
 				INFOPLIST_FILE = "Monopoly BankerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Banker Game AssistantTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly Banker.app/Monopoly Banker";
 			};
 			name = Release;
@@ -651,7 +655,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		151DACDE1A6B261A0005D5F9 /* Build configuration list for PBXProject "Monopoly Banker" */ = {
+		151DACDE1A6B261A0005D5F9 /* Build configuration list for PBXProject "Banker Game Assistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				151DAD001A6B261A0005D5F9 /* Debug */,
@@ -660,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		151DAD021A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Monopoly Banker" */ = {
+		151DAD021A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Banker Game Assistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				151DAD031A6B261A0005D5F9 /* Debug */,
@@ -669,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		151DAD051A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Monopoly BankerTests" */ = {
+		151DAD051A6B261A0005D5F9 /* Build configuration list for PBXNativeTarget "Banker Game AssistantTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				151DAD061A6B261A0005D5F9 /* Debug */,

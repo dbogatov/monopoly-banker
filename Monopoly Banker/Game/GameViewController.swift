@@ -34,6 +34,10 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 	var allowForSecondCard : Bool = false
 	
     @IBOutlet weak var errorLabel: UILabel!
+	
+	@IBOutlet weak var transferButton: UIButton!
+	@IBOutlet weak var exitButton: UIButton!
+	@IBOutlet weak var exitLargeButton: UIButton!
     
 	@IBOutlet weak var display: UILabel!
 	@IBOutlet weak var multiplier: UILabel!
@@ -157,6 +161,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 					DataModel.sharedInstance.deposit(getAmount(), name: cardObject)
 				default:
 					allowForSecondCard = true
+					SoundController.sharedInstance.numberPressed()
+					transferButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
 					return
 			}
 		} else {
@@ -230,6 +236,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		player3.setHighlighted(false)
 		player4.setHighlighted(false)
 		
+		transferButton.setTitleColor(UIColor(red: 19.0/255.0, green: 78.0/255.0, blue: 27.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
+		
 		if delay {
 			var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("updateDisplay"), userInfo: nil, repeats: false)
 		} else {
@@ -298,6 +306,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 			for banner in adBanners {
 				banner.hidden = true
 			}
+			exitButton.hidden = true
+			exitLargeButton.hidden = false
 		}
 	}
 	
@@ -316,7 +326,21 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
 		updateAds()
         updateDisplay()
 		updateUI()
+		
     }
+	
+	override func viewDidAppear(animated: Bool) {
+		
+		var alert = UIAlertController(title: "Important instruction", message: "Please, choose card before pressing any button. OK?", preferredStyle: UIAlertControllerStyle.Alert)
+		/*
+		alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {(action) in
+			var alert = UIAlertController(title: "Important instruction", message: "Banker will not work without card anyway, so please, choose the card first.", preferredStyle: UIAlertControllerStyle.Alert)
+			alert.addAction(UIAlertAction(title: "Okey", style: UIAlertActionStyle.Default, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
+		}))*/
+		alert.addAction(UIAlertAction(title: "Yes, I have read it", style: UIAlertActionStyle.Default, handler: nil))
+		self.presentViewController(alert, animated: true, completion: nil)
+	}
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

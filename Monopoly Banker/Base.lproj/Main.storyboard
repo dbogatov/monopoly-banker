@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DS-DIGIB.TTF">
-            <string>DS-Digital-Bold</string>
             <string>DS-Digital-Bold</string>
             <string>DS-Digital-Bold</string>
             <string>DS-Digital-Bold</string>
@@ -16,13 +16,13 @@
         <!--Game View Controller-->
         <scene sceneID="fax-eL-0cE">
             <objects>
-                <viewController id="IHL-vh-DX3" customClass="GameViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IHL-vh-DX3" customClass="GameViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XS7-BC-Yh7"/>
                         <viewControllerLayoutGuide type="bottom" id="Xzh-LE-3VD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gU2-uB-hyL">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-hd-IvE">
@@ -40,19 +40,6 @@
                                     <rect key="frame" x="8" y="20" width="303" height="63"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-rz-hhX">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="DS-Digital-Bold" family="DS-Digital" pointSize="110"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="195" y="28" width="247" height="84"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="DS-Digital-Bold" family="DS-Digital" pointSize="55"/>
-                                    <rect key="frame" x="57" y="23" width="126" height="58"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yew-he-7x1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="90"/>
@@ -62,8 +49,8 @@
                                     <rect key="frame" x="455" y="28" width="92" height="84"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
-                                    <rect key="frame" x="191" y="26" width="55" height="55"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="45"/>
+                                    <rect key="frame" x="199" y="26" width="47" height="52"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpB-q9-Dc6">
@@ -464,6 +451,31 @@
                                     <action selector="actionButonPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="zZ0-9j-79N"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J37-fE-EjM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="1" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <size key="titleShadowOffset" width="1" height="-1"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" red="0.074509803921568626" green="0.30588235294117649" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="652" y="540" width="100" height="83"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <rect key="frame" x="261" y="323" width="50" height="45"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTW-Bk-k3F">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -573,18 +585,6 @@
                                     <rect key="frame" x="16" y="24" width="55" height="55"/>
                                 </variation>
                             </label>
-                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
-                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="966" width="320" height="50"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-1" y="518" width="320" height="50"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="IHL-vh-DX3" id="QGF-wM-LNS"/>
-                                </connections>
-                            </adBannerView>
                             <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-pb-QN1">
                                 <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
@@ -632,13 +632,25 @@
                                     <rect key="frame" x="9" y="87" width="303" height="23"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J37-fE-EjM">
+                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-1S-Lpl">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="966" width="320" height="50"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="IHL-vh-DX3" id="QGF-wM-LNS"/>
+                                </connections>
+                            </adBannerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-6y-Ldo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.6705882352941176" green="1" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="1" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="1" height="-1"/>
-                                <state key="normal" title=".">
-                                    <color key="titleColor" red="0.074509803921568626" green="0.30588235294117649" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.070588235289999995" green="0.2470588235" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -646,23 +658,32 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="652" y="540" width="100" height="83"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="261" y="323" width="50" height="45"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                    <rect key="frame" x="9" y="493" width="303" height="67"/>
                                 </variation>
                                 <connections>
-                                    <action selector="dotPressed:" destination="IHL-vh-DX3" eventType="touchUpInside" id="uly-sF-WF5"/>
+                                    <action selector="saveAndExit" destination="IHL-vh-DX3" eventType="touchUpInside" id="hvh-x2-ru0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-rz-hhX" customClass="DigitalLabel" customModule="Banker_Game_Assistant" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="195" y="28" width="247" height="84"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                    <rect key="frame" x="65" y="23" width="126" height="58"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.37254901959999998" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="fwY-hd-IvE"/>
-                                <exclude reference="E0O-rz-hhX"/>
                                 <exclude reference="yew-he-7x1"/>
                                 <exclude reference="RpB-q9-Dc6"/>
                                 <exclude reference="XpF-2U-ooq"/>
@@ -680,22 +701,23 @@
                                 <exclude reference="GV6-WW-12D"/>
                                 <exclude reference="xxg-QW-yYY"/>
                                 <exclude reference="f9M-Rl-ZQv"/>
+                                <exclude reference="J37-fE-EjM"/>
                                 <exclude reference="vTW-Bk-k3F"/>
                                 <exclude reference="E0G-vQ-Glm"/>
                                 <exclude reference="Bpw-0k-h1X"/>
                                 <exclude reference="aoL-GH-Com"/>
                                 <exclude reference="LnM-Ni-VAo"/>
-                                <exclude reference="gPd-1S-Lpl"/>
                                 <exclude reference="Z6v-pb-QN1"/>
                                 <exclude reference="ynl-Iu-h2Y"/>
                                 <exclude reference="o88-28-jEW"/>
-                                <exclude reference="J37-fE-EjM"/>
+                                <exclude reference="gPd-1S-Lpl"/>
+                                <exclude reference="F0R-6y-Ldo"/>
+                                <exclude reference="E0O-rz-hhX"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="fwY-hd-IvE"/>
-                                <include reference="E0O-rz-hhX"/>
                                 <include reference="yew-he-7x1"/>
                                 <include reference="RpB-q9-Dc6"/>
                                 <include reference="XpF-2U-ooq"/>
@@ -713,16 +735,22 @@
                                 <include reference="GV6-WW-12D"/>
                                 <include reference="xxg-QW-yYY"/>
                                 <include reference="f9M-Rl-ZQv"/>
+                                <include reference="J37-fE-EjM"/>
                                 <include reference="vTW-Bk-k3F"/>
                                 <include reference="E0G-vQ-Glm"/>
                                 <include reference="Bpw-0k-h1X"/>
                                 <include reference="aoL-GH-Com"/>
                                 <include reference="LnM-Ni-VAo"/>
-                                <include reference="gPd-1S-Lpl"/>
                                 <include reference="Z6v-pb-QN1"/>
                                 <include reference="ynl-Iu-h2Y"/>
                                 <include reference="o88-28-jEW"/>
-                                <include reference="J37-fE-EjM"/>
+                                <include reference="gPd-1S-Lpl"/>
+                                <include reference="E0O-rz-hhX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="F0R-6y-Ldo"/>
                             </mask>
                         </variation>
                     </view>
@@ -731,11 +759,14 @@
                         <outlet property="currency" destination="LnM-Ni-VAo" id="q87-SA-5wN"/>
                         <outlet property="display" destination="E0O-rz-hhX" id="3vd-Im-dy7"/>
                         <outlet property="errorLabel" destination="o88-28-jEW" id="B0m-o8-KlC"/>
+                        <outlet property="exitButton" destination="ynl-Iu-h2Y" id="rZy-I6-maq"/>
+                        <outlet property="exitLargeButton" destination="F0R-6y-Ldo" id="6Qi-u1-ivq"/>
                         <outlet property="multiplier" destination="yew-he-7x1" id="Zoo-XN-Sk4"/>
                         <outlet property="player1" destination="vTW-Bk-k3F" id="jTJ-zV-c4Q"/>
                         <outlet property="player2" destination="Bpw-0k-h1X" id="PuL-32-8q1"/>
                         <outlet property="player3" destination="E0G-vQ-Glm" id="8l3-KZ-fuS"/>
                         <outlet property="player4" destination="aoL-GH-Com" id="ZZf-w0-vix"/>
+                        <outlet property="transferButton" destination="xxg-QW-yYY" id="Hyf-63-MMJ"/>
                         <outletCollection property="adBanners" destination="gPd-1S-Lpl" collectionClass="NSMutableArray" id="vJa-kA-fP8"/>
                     </connections>
                 </viewController>
@@ -746,13 +777,13 @@
         <!--Setup Game View Controller-->
         <scene sceneID="k5O-mA-CcI">
             <objects>
-                <viewController id="Zas-8Q-OYt" customClass="SetupGameViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zas-8Q-OYt" customClass="SetupGameViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U40-7F-D3n"/>
                         <viewControllerLayoutGuide type="bottom" id="vur-e9-wdn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="olr-bp-dIi">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BwU-aO-yFe">
@@ -1798,13 +1829,13 @@
         <!--Extras View Controller-->
         <scene sceneID="jmS-rO-QfB">
             <objects>
-                <viewController id="gPj-Ut-QE9" customClass="ExtrasViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gPj-Ut-QE9" customClass="ExtrasViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rtc-D9-DGe"/>
                         <viewControllerLayoutGuide type="bottom" id="WqC-rC-CdF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YFa-Vc-VFp">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYJ-Ke-Svo">
@@ -2203,13 +2234,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6f-6f-Gc3">
@@ -2218,27 +2249,6 @@
                                     <rect key="frame" x="0.0" y="735" width="768" height="289"/>
                                 </variation>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-uy-6rw">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="221" y="339" width="324" height="185"/>
-                                </variation>
-                            </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfy-YI-ch2">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="235" y="351" width="191" height="62"/>
-                                </variation>
-                            </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD THRU" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jY-LE-b2z">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
@@ -2248,14 +2258,6 @@
                                     <rect key="frame" x="395" y="441" width="31" height="30"/>
                                 </variation>
                             </label>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mr. Millionaire " borderStyle="roundedRect" placeholder="Cardholder name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjV-Ea-KvD">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="237" y="477" width="208" height="30"/>
-                                </variation>
-                            </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4w-hM-7IE">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -2263,15 +2265,6 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="451" y="445" width="44" height="21"/>
-                                </variation>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 2 3 4    5 6 7 8    9 0 1 2    3 4 5 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqe-NN-Ny1">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="235" y="421" width="268" height="21"/>
                                 </variation>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMO-vj-A76">
@@ -2406,17 +2399,22 @@
                                     <rect key="frame" x="16" y="20" width="288" height="132"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dedicated to my parents" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jto-t2-WK7">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="115" y="539" width="189" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="L6f-6f-Gc3"/>
-                                <exclude reference="gAf-uy-6rw"/>
-                                <exclude reference="bfy-YI-ch2"/>
                                 <exclude reference="5jY-LE-b2z"/>
-                                <exclude reference="xjV-Ea-KvD"/>
                                 <exclude reference="W4w-hM-7IE"/>
-                                <exclude reference="zqe-NN-Ny1"/>
                                 <exclude reference="RMO-vj-A76"/>
                                 <exclude reference="5Q0-Ch-FNv"/>
                                 <exclude reference="u4j-yE-ePy"/>
@@ -2424,17 +2422,14 @@
                                 <exclude reference="8u4-ys-vbr"/>
                                 <exclude reference="jIp-HB-KcJ"/>
                                 <exclude reference="uFE-0O-9LX"/>
+                                <exclude reference="jto-t2-WK7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="L6f-6f-Gc3"/>
-                                <include reference="gAf-uy-6rw"/>
-                                <include reference="bfy-YI-ch2"/>
                                 <include reference="5jY-LE-b2z"/>
-                                <include reference="xjV-Ea-KvD"/>
                                 <include reference="W4w-hM-7IE"/>
-                                <include reference="zqe-NN-Ny1"/>
                                 <include reference="RMO-vj-A76"/>
                                 <include reference="5Q0-Ch-FNv"/>
                                 <include reference="u4j-yE-ePy"/>
@@ -2447,11 +2442,13 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="uFE-0O-9LX"/>
+                                <include reference="jto-t2-WK7"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="dedicatedLabel" destination="jto-t2-WK7" id="bEJ-Qt-aOG"/>
                         <segue destination="IHL-vh-DX3" kind="presentation" identifier="newGameSegue" id="tso-Iy-cvv"/>
                     </connections>
                 </viewController>
@@ -2462,7 +2459,7 @@
         <!--Load Game Table View Controller-->
         <scene sceneID="8II-jK-PMP">
             <objects>
-                <tableViewController id="Ris-zj-dzX" customClass="LoadGameTableViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ris-zj-dzX" customClass="LoadGameTableViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="pUx-IC-xsf">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2470,7 +2467,7 @@
                         <color key="separatorColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.3411764706" green="0.74901960779999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="backCell" rowHeight="100" id="PYh-JE-9DM" customClass="LoadGameTableViewCell" customModule="Monopoly_Banker" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="backCell" rowHeight="100" id="PYh-JE-9DM" customClass="LoadGameTableViewCell" customModule="Banker_Game_Assistant" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PYh-JE-9DM" id="nnJ-Jr-N13">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -2544,7 +2541,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.37647058823529411" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadCell" rowHeight="135" id="WZj-IQ-yV1" customClass="LoadGameTableViewCell" customModule="Monopoly_Banker" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadCell" rowHeight="135" id="WZj-IQ-yV1" customClass="LoadGameTableViewCell" customModule="Banker_Game_Assistant" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WZj-IQ-yV1" id="pHq-4D-ttc">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -2755,7 +2752,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0o4-d3-bbA"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC4-4L-SoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2774,13 +2770,13 @@
         <!--Page Root View Controller-->
         <scene sceneID="SN7-VX-WG6">
             <objects>
-                <viewController id="FSn-e4-GY8" customClass="PageRootViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FSn-e4-GY8" customClass="PageRootViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mf2-gj-mz7"/>
                         <viewControllerLayoutGuide type="bottom" id="xhr-KZ-27a"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="he5-wc-lJb">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oQ-r4-O2c">
@@ -2873,13 +2869,13 @@
         <!--Page Content View Controller-->
         <scene sceneID="t11-hc-aqX">
             <objects>
-                <viewController storyboardIdentifier="PageContentViewController" id="h8i-wI-bpF" customClass="PageContentViewController" customModule="Monopoly_Banker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" id="h8i-wI-bpF" customClass="PageContentViewController" customModule="Banker_Game_Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a6B-hs-G4t"/>
                         <viewControllerLayoutGuide type="bottom" id="ChW-0e-yEx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="PageContentController" id="B6f-jC-pkq">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-ro-xIh">
